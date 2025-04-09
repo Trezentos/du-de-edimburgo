@@ -1,0 +1,179 @@
+@import '../_var-mix.scss';
+
+
+a { color: inherit; text-decoration: none; transition: all .2s linear; }
+a:hover{ color: $primary-color; }
+
+strong{ font-weight: 900; color: $root-color; }
+
+p {
+   font-size: 1.6em;
+   font-family: 'area-normal', sans-serif;
+   font-weight: 100;
+   letter-spacing: 0px;
+
+   &.bigger {
+      font-size: 2em;
+      @include fs-vw(2);
+      letter-spacing: 0px;
+
+
+   }
+
+   &.medium {
+      font-size: 1.4em;
+
+   }
+
+   &.small {
+      font-size: 1.2em;
+      //@include fs-vw(1.2);
+
+   }
+
+   &.small-2 {
+      font-size: 1.1em;
+      line-height: 1.5em;
+
+   }
+}
+
+
+h1, h2{ 
+
+   font-size: 26px;
+   @include fs-vw(4);
+   margin-bottom: 30px;
+   color: $primary-color;
+   // text-align: center;
+   font-family: 'area-normal', serif;
+   font-weight: 100;
+   text-transform: uppercase;
+   letter-spacing: 7px;
+   line-height: 1.33;
+
+   &.small{
+      letter-spacing: 0px;
+      @include fs-vw(3.2);
+   }
+
+   &.big {
+      //@include fs-vw(7);
+
+   }
+}
+
+h3{
+   font-size: 2em;
+   font-weight: 400;
+   margin-bottom: 20px;
+   transition: all 0.3s linear;
+   line-height: 1.3;
+
+   &.big{
+      font-size: 30px;
+   }
+}
+
+h4{
+
+}
+
+.subtitle{
+   color: inherit;
+   font-size: 40px;
+   line-height: 1.5;
+
+   &.small{
+      font-size: 18px;
+      line-height: 1.9;
+   }
+
+   &.blog{
+      font-size: 30px;
+      line-height: 1.3;
+   }
+}
+
+
+ul{ list-style-type: none; }
+
+.line{ 
+   background: $d-gray; 
+}
+
+hr{
+   height: 1px;
+   width: 100%;
+   background: black;
+   margin: 4px 0 20px;
+   border: none;
+}
+
+section{
+   padding: 90px 0;
+}
+
+address{ font-style: normal; }
+
+.font-primary{ font-family: 'IBM Plex Sans' !important; }
+// .font-secondary{ font-family: 'zahrah' !important; }
+
+
+// TABLET LANDSCAPE
+@media only screen and (min-width: 577px) and (max-width: 1024px){
+   p {
+
+      &.bigger {
+
+
+      }
+
+      &.medium {
+
+      }
+
+      &.small {
+         //font-size: 0.9em !important;
+
+      }
+
+      &.small-2 {
+
+      }
+   }
+
+
+}
+
+// TABLET PORTRAIT
+@media only screen and (min-width: 578px) and (max-width: 768px){
+
+
+}
+
+
+// SMARTPHONE
+@media only screen and (max-width: 576px) {
+   h1, h2 {
+      @include fs-vw(3.6, 440);
+      letter-spacing: 4px;
+
+      &.big {
+         letter-spacing: 6px;
+      }
+
+      &.bigger {
+
+      }
+
+
+   }
+
+   p {
+      &.bigger {
+         @include fs-vw(2, 440);
+         line-height: 30px;
+      }
+   }
+}

@@ -1,0 +1,75 @@
+input, .input{
+   border: 1px solid black;
+   border-radius: 0;
+   padding: 8px 17px;
+   padding-top: 11px !important;
+   @include size(100%, auto);
+   @include text($secondary-color, $size: 15px);
+   outline: none;
+   background: #FFF;
+   font-family: 'area-normal', sans-serif;
+   color: black;
+   box-shadow: none;
+   font-size: 17px;
+   font-weight: 400 !important;
+
+   &:hover {
+      border: 1px solid black;
+   }
+
+   @include placeholder{
+      color: black;
+      padding-top: 0.7px;
+   }
+}
+.select{
+   height: auto !important;
+   width: 100%;
+}
+.select select{
+   border: none;
+   border-bottom: 2px solid $gray-color;
+   border-radius: 0;
+   padding: 9px 23px 12px 0;
+   padding-top: 9px !important;
+
+   height: auto;
+   @include text($primary-color, $size: 20px);
+   font-family: 'proxima-nova' !important;
+   background: #FFF;
+   transition: all 0.2s linear;
+   width: 100%;
+   box-shadow: none !important;
+}
+.select:not(.is-multiple):not(.is-loading)::after{ border-color: #AAA; border-width: 2px; }
+
+textarea, .textarea{
+   border: 1px solid black;
+   border-radius: 0;
+   padding: 9px 17px;
+   padding-top: 16px !important;
+   width: 100%;
+   font-family: 'area-normal', sans-serif;
+   outline: none;
+   font-size: 16px;
+   background: none;
+   color: black;
+   height: 112px;
+
+   @include placeholder{
+      color: black;
+      padding-top: 0px;
+      font-family: 'area-normal', sans-serif;
+      letter-spacing: 0px;
+
+
+   }
+
+ 
+}
+
+.input:focus, .textarea:focus, .select select:focus, .input:active, .textarea:active, .select select:active{
+   border-color: black;
+   box-shadow: none;
+}
+

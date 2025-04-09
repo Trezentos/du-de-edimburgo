@@ -1,0 +1,308 @@
+
+
+
+
+.main-banners{
+    position: relative;
+    margin-top: 0; 
+    padding: 0 0 0 0px;
+    background-color: $l-gray;
+    pointer-events: none;
+
+
+    .cycle-prev, .cycle-next{
+       @include absolute($t: 41%, $l: 10px, $z: 120);
+       @include size(100px);
+       @include flex(center, center);
+       cursor: pointer;
+       opacity: 0.8;
+       @include transition();
+    }
+ 
+    .cycle-next{
+       left: initial;
+       right: 10px;
+    }
+ 
+    .cycle-prev:hover, .cycle-next:hover{
+       // background-color: #FFF;
+       transform: scale(1.1);
+       opacity: 1;
+    }
+    
+    .text-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .main-logo{
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      z-index: 2;
+      font-weight: 400;
+      min-width: 55%;
+
+      h2 {
+        color: white !important;
+        font-size: 9.5px;
+        margin-bottom: 42px;
+        font-weight: 700;
+
+        p {
+          letter-spacing: 3px;
+          font-weight: 700;
+        }
+      }
+      
+      @media(min-width: 578px) {
+        img {
+          width: 440px;
+          max-width: none;
+        }
+      }
+
+      
+
+    }
+ 
+
+    .cycle-slideshow {
+      height: 100vh;
+      //max-height: 1050px;
+      //max-height: 100vh;
+    }
+ 
+    .cycle-slideshow .li{
+       top: 0px !important;
+       width: 100%;
+       background-position: center top;
+       height: 100vh;
+       background-repeat: no-repeat;
+       background-size: cover;
+
+       &.video{
+          pointer-events: none;
+       }
+ 
+       .overlay{
+          @include absolute($l: 0, $t:0, $z: 1);
+          @include size(100%);
+          background: linear-gradient(to bottom, rgba(30,30,30,.2) 0%, rgba(30,30,30,0.6) 100%);
+       }
+    }
+ 
+    .cycle-pager{
+       text-align: center;
+       @include absolute($b: 30px, $l:0, $z: 101);
+       @include size(100%, auto);
+       cursor: pointer;
+ 
+       span{
+          text-indent: -9999px;
+          @include size(6px, 6px);
+          background-color: #FFF;
+          display: inline-block;
+          margin: 0 20px;
+          border-radius: 3px;
+       }
+ 
+       .cycle-pager-active{
+          @include size(10px, 10px);
+          background-color: $primary-color;
+          transform: translateY(-2px);
+       }
+    }
+ }
+ 
+
+
+ 
+/************************* NOTEBOOK **************************/
+@media only screen and (min-width: 1025px) and (max-width: 1499px) {
+   .main-banners {
+     .main-logo{
+       left: 0;
+       transform: translate(0, -50%);
+     }
+   
+   }
+}
+
+/*********************** TABLET PORTRAIT **********************/
+@media only screen and (min-width: 577px) and (max-width: 769px){
+  .main-banners {
+    .cycle-slideshow {
+      aspect-ratio: 1920/1050;
+      width: 100%;
+      height: auto;
+
+      .li{
+        aspect-ratio: 1920/1050;
+        width: 100%;
+        height: auto !important;
+
+        .text-container {
+          position: absolute;
+          top: 0;
+        }
+
+
+        @supports not (aspect-ratio: 1) {
+          padding-top: calc(100% / 1.8286); /* Aproximadamente 54.7% */
+        }
+
+      }
+    }
+
+    .main-logo {
+      left: 0;
+      transform: translate(0, -50%);
+
+      h2 {
+        font-size: 7.4px;
+        margin-bottom: 28px;
+      }
+
+      img {
+        width: 350px;
+        max-width: none;
+      }
+    }
+  }
+}
+
+/*********************** TABLET LANDSCAPE ***********************/
+@media only screen and (min-width: 577px) and (max-width: 1024px) {
+
+
+   .main-banners {
+      .txt-banner { 
+         right: 50%; 
+         transform: translate(50%, -50%);
+         top: 50%;
+
+         &::after {
+            bottom: -25px;
+         }
+      }
+      h1, p { width: 330px; }
+
+      .cycle-slideshow {
+         aspect-ratio: 1920/1050;
+         width: 100%;
+
+       }
+
+      .cycle-slideshow .li{
+        aspect-ratio: 1920/1050;
+        width: 100%;
+
+      }
+
+     .main-logo{
+       //min-width: 85%;
+       width: 440px;
+     }
+   }
+}
+
+
+
+// Smartphone
+@media only screen and (max-width: 576px){
+   .main-banners{
+      height: auto;
+
+     .cycle-slideshow {
+       height: 100dvh !important;
+       transition: 0.3s;
+     }
+
+     .header-options {
+       align-items: center;
+     }
+
+      .text-container {
+         position: relative;
+         width: 100%;
+         height: 100%;
+
+         >div {
+            width: 100%;
+            height: 100%;
+         }
+
+        .main-logo {
+          bottom: 39px;
+          transform: translateX(0%);
+          top: auto;
+          left: auto;
+          right: 35px;
+          width: auto !important;
+
+          h2 {
+            font-size: 6px;
+            margin-bottom: 10px;
+            p {
+              letter-spacing: 2px;
+            }
+          }
+        }
+
+
+       }
+
+      .txt-banner{
+         top: 25vw;
+         padding: 0;
+         width: 100%;
+
+         h1, p {
+            font-size: 22px;
+            text-align: center;
+         }
+
+         &::after{
+            content: none;
+         }
+      }
+
+      .h1{
+         font-size: 24px;
+         margin-bottom: 21px;
+         letter-spacing: 3px;
+         text-align: center;
+
+
+      }
+
+      .h2{ 
+         font-size: 15px;
+         margin-bottom: 15px;
+      }
+
+      .cycle-slideshow {
+        height: 100vh;
+      }
+
+      .cycle-slideshow .li{
+         width: 100%;
+         height: 100%;
+
+      }
+
+      .cycle-prev, .cycle-next{
+         left: 30px;
+         top: 675px;
+         width: 50px;
+         height: 50px;
+
+         svg{ transform: scale(0.6); }
+      }
+
+      .cycle-next{ right: 30px; left: initial; }
+   }
+}

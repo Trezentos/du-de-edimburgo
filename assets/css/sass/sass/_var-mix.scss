@@ -1,0 +1,301 @@
+@charset "utf-8";
+
+// FONTS
+
+/* 100 -> Thin  ; 200 -> ExtraLight  ;  300 -> Light  ;  400 -> Regular  ;  500 -> Medium  ;  600  -> SemiBold  ;  700  -> Bold  ;  800  -> ExtraBold  ;  900  -> Black */
+
+
+
+
+
+// VARS
+
+$root-color:        #000;
+
+$primary-color:     #DAA749;
+$secondary-color:   #AF9A75;
+
+$light-background:  #F4EAD9;
+
+$dark-color:        #2E2B24;
+$light-color:       #98d2ec;
+$lighter-color:     #c2bb82;
+
+$gray-color:        #7E7E7E;
+$l-gray:            #dfdfdf;
+$ll-gray:           #f0f6fe;
+$d-gray:            #d3cebb;
+$grey: $gray-color; $l-grey: $l-gray; $ll-grey: $ll-gray; $d-grey: $d-gray;
+
+
+.is-absolute{ position: absolute; }
+
+.bg-white{ background: #FFF !important; }
+.bg-gray{ background: $gray-color !important; }
+.bg-l-gray{ background: $l-gray !important; }
+.bg-ll-gray{ background: $ll-gray !important; }
+.bg-root{ background: $root-color !important; }
+.bg-primary{ background: $primary-color !important; }
+.bg-secondary{ background: $secondary-color !important; }
+
+.color-root{ color: $root-color; }
+.color-primary{ color: $primary-color !important; }
+.color-secondary{ color: $secondary-color !important; }
+.color-white{ color: #FFF !important; }
+.color-gray{ color: $gray-color !important }
+.color-gray-light{ color: #BBB !important }
+
+.is-pointer-off{ pointer-events: none; }
+
+.z-index-0{ z-index: 0; }
+.z-index-1{ z-index: 1; }
+.z-index-2{ z-index: 2; }
+
+.lp-0{ letter-spacing: 0; }
+
+
+// ////////////////////////////// MIXINS
+
+// Linha vertical
+.spin.animated {
+    opacity: 1;
+    animation: spin 80s backwards ease;
+}
+
+@mixin spinSun($transXpos, $transYpos){
+
+    @keyframes spin {
+        0%   {
+            opacity: 0;
+            transform: translate($transXpos,$transYpos) rotate(-90deg);
+        }
+        1%   {
+            opacity: 1;
+        }
+        100% {
+            transform: translate($transXpos,$transYpos) rotate(45deg);
+        }
+    }
+
+
+
+    &.clock-spin-animation.animated { opacity: 1; animation: spin var(--t4) backwards var(--ease-animation); }
+}
+
+.spin-reverse.animated {
+    opacity: 1;
+    animation: spin-reverse 50s backwards ease;
+}
+
+@mixin spinSunReverse($transXpos: 0, $transYpos: 50%){
+    @keyframes spin-reverse {
+        0%   {
+            opacity: 0;
+            transform: translate($transXpos, $transYpos) rotate(90deg);
+        }
+        10%   {
+            opacity: 1;
+        }
+        100% {
+            transform: translate($transXpos, $transYpos) rotate(45deg);
+        }
+    }
+
+    &.clock-spin-animation.animated { opacity: 1; animation: clock-spin var(--t4) backwards var(--ease-animation); }
+}
+
+
+@mixin fs-vw($em-value, $base-width: 1920) {
+
+    $vw-size: ($em-value * 1000) / $base-width;
+
+    $vw-size-rounded: round($vw-size * 100) / 100;
+
+    $min-size: round($em-value * 78) / 100;
+
+    font-size: clamp(#{$min-size}em, #{$vw-size-rounded}vw, #{$em-value}em);
+
+}
+
+@mixin line-v($height, $left, $top, $color: white) {
+    &::after {
+      content: '';
+      position: absolute;
+      left: $left;
+      top: $top; // Você também pode parametrizar o valor de `top` se necessário
+      height: $height;
+      width: 1px;
+      background-color: $color;
+      z-index: 3;
+    }
+  }
+
+@mixin line($right: 110%, $left: auto, $bottom: 0, $height: 3px, $width: 55px, $color: $primary-color) {
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: $bottom;
+        right: $right;
+        left: $left;
+        height: $height;
+        background-color: $color;
+        width: $width;
+    }
+}
+
+// Background
+
+@mixin bg-img($img, $rep:no-repeat, $h:center, $v:top) {
+    background: url('../img/#{$img}') $rep $h $v;
+}
+
+// Animation 
+
+@mixin transition($time:0.4s) {
+    transition: all $time cubic-bezier(0.38,0,.02,1);
+}
+
+// Text
+
+@mixin text($color:null, $size: null, $weight: null, $align: null, $up:0, $i:0, $lh: null) {
+    color: $color;
+    font-weight: $weight;
+    font-size: $size;
+    text-align: $align;
+    line-height: $lh;
+    @if ($up == 1) {
+        text-transform: uppercase;
+    }
+    @if ($i == 1) {
+        font-style: italic;
+    }
+}
+
+// Button
+
+@mixin btn($bg:$main, $color:#fff, $border:null) {
+    background: $bg;
+    color: $color;
+    @if ($border != null) {
+        border-bottom: 3px solid $border;
+    }
+}
+
+// Size
+
+@mixin size($width,$height:$width) {
+    width: $width;
+    height: $height;
+}
+
+// Positions
+
+@mixin position($position, $t: null, $r: null, $b: null, $l: null, $z: 0) {
+    position: $position;
+    top: $t;
+    right: $r;
+    bottom: $b;
+    left: $l;
+    @if ($z != 0) {
+        z-index: $z;
+    }
+}
+
+@mixin relative($args...) {
+    @include position(relative, $args...);
+}
+
+@mixin absolute($args...) {
+    @include position(absolute, $args...);
+}
+
+@mixin fixed($args...) {
+    @include position(fixed, $args...);
+}
+
+// Centralizar Absolutes
+
+@mixin abs-center($ml, $t:null,$b:null,$z:0) {
+    position: absolute;
+    left: 50%;
+    margin-left: $ml;
+    top: $t;
+    bottom: $b;
+    @if ($z != 0) {
+        z-index: $z;
+    }
+}
+
+// Flex
+
+@mixin flex($hori:null, $vert:null, $wrap:0, $direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    @if($wrap == 1) {
+        flex-wrap: wrap;
+    }
+    @if($hori) {
+        justify-content: $hori;
+    }
+    @if($vert) {
+        align-items: $vert;
+    }
+}
+
+
+// Main Pseudos
+
+@mixin before($color:null, $w:null, $h:null, $bl:null, $bt:-50%, $o:null, $time:0.4s) {
+    &:before {
+        content:'';
+        background: $color;
+        @include size($w, $h);
+        @include absolute($t: $bt, $l: $bl);
+        @include transition($time);
+        opacity: $o;
+        // z-index: -1;
+    }
+}
+
+@mixin after($color:null, $bb:null, $bl:null, $w:35px, $h:3px) {
+    @include relative;
+    &:after {
+        content:'';
+        background: $color;
+        @include size($w, $h);
+        @include absolute($b: $bb, $l: $bl);
+        @include transition;
+    }
+}
+
+@mixin bar($color:null, $w:null, $h:null, $bl:null, $bt:-50%) {
+    background: $color;
+    @include size($w, $h);
+    @include absolute($t: $bt, $l: $bl);
+    @include transition;
+}
+
+
+@mixin optional-at-root($sel) {
+    @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+        @content;
+    }
+}
+
+@mixin placeholder {
+    @include optional-at-root('::-webkit-input-placeholder') {
+        @content;
+    }
+
+    @include optional-at-root(':-moz-placeholder') {
+        @content;
+    }
+
+    @include optional-at-root('::-moz-placeholder') {
+        @content;
+    }
+
+    @include optional-at-root(':-ms-input-placeholder') {
+        @content;
+    }
+}

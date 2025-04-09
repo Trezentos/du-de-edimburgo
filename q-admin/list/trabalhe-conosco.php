@@ -1,0 +1,84 @@
+<?php
+require __DIR__ . '/../config.php';
+require GESTOR_MODELS . SELF_PAG;
+require PHP . 'classes/Class.paginacao-admin.php';
+
+
+
+get_header_gestor();
+get_barra_header();
+?>
+
+
+<div id="buttons">
+	<div class="text-right">
+		<? include GESTOR_INCLUDES . 'items-per-page.php'; ?>
+		<? count_results($count) ?>
+		<? //btn_add() ?>
+	</div>
+</div>
+
+
+<?php
+if ($count>0)
+{
+	# PAGINATION
+	$navbar = new Paginator;
+	$navbar->items_total = $count;
+	$navbar->mid_range = 9;
+	$navbar->items_per_page = $items_page;
+	$navbar->paginate();
+
+	$query = $db->get_results("SELECT * FROM ".$tables[$__TABLE__]." ORDER BY criado DESC $navbar->limit");
+?>
+
+
+
+<div class="table-responsive">
+	<table class="table table-striped table-hover" data-table="<?=$__TABLE__?>">
+		<thead>
+			<tr>
+				<th data-sorter="false"></th>
+				<th>ID</th>
+				<th>Nome</th>
+				<th>E-mail</th>
+				<th data-sorter="false">WhastApp</th>
+				<th data-sorter="false">Qual a finalidade da compra?</th>
+				<th data-sorter="false">Tipo de apartamento?</th>
+				<th data-sorter="false">Cadastrado em</th>
+				<th class="actions text-center" data-sorter="false">Ações</th>
+			</tr>
+		</thead>
+		<tbody>
+		<?php foreach($query as $rs) { ?>
+			<tr id="<?php echo $rs->id; ?>" class="ui-state-default">
+				<td></td>
+				<td><?php echo $rs->id; ?></td>
+				<td><?php echo $rs->titulo; ?></td>
+				<td><?php echo $rs->email; ?></td>
+				<td><?php echo $rs->telefone; ?></td>
+				<td><?php echo $rs->p1; ?></td>
+				<td><?php echo $rs->p2; ?></td>
+				<td><?php echo data($rs->criado); ?></td>
+				<td class="text-center">
+					<? //btn_edit($rs->id) ?>
+					<? btn_delete($rs->id) ?>
+				</td>
+			</tr>
+		<?php } ?>
+		</tbody>
+	</table>
+</div>
+
+<?php
+	echo ($query != '' && $navbar->num_pages>1 ) ? $navbar->display_pages() : '';
+} else {
+?>
+
+	<div class="alert alert-warning show">
+		<strong>Nenhum registro existente</strong>
+	</div>
+
+<?php 
+	} 
+get_footer_gestor();

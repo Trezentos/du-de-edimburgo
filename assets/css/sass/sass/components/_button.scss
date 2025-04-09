@@ -1,0 +1,131 @@
+button, .button{
+    border: none;
+    cursor: pointer; 
+    transition: all 0.2s linear;
+    padding: 15px 25px 14px;
+    font-family: 'proxima-nova';
+    font-weight: 400;
+ }
+ 
+
+ .btn{
+    position: relative;
+    background: $secondary-color;
+    display: inline-block;
+    padding: 11px 32px 12px;
+    cursor: pointer;
+    transition: all .2s linear;
+    border-radius: 6px;
+    height: auto;
+    font-size: 16px;
+    // width: 400px;
+    max-width: 100%;
+    outline: none;
+    overflow: hidden;
+    // letter-spacing: 1px;
+    @include text($color: #FFF, $size: 1.6em, $lh: 1.4, $weight: 400, $align: center);
+ 
+    span{
+       position: relative;
+       z-index: 1;
+    }
+ 
+ 
+    i{
+       font-size: 19px;
+       line-height: 25px;
+       margin-right: 3px;
+    }
+ 
+    svg{
+       margin-left: 10px;
+       transform: translateY(3px);
+    }
+    
+    &.is-transparent{
+       background: none;
+       color: #5F584D;
+ 
+       &:hover{
+          //color: $primary-color;
+       }
+ 
+       svg{
+          path{
+             stroke: $primary-color;
+          }
+       }
+    }
+ 
+    &.is-gray{
+       background: $root-color;
+    }
+
+    &:hover {
+       color: white;
+    }
+ }
+
+ .action-button {
+    transition: .2s;
+    background: $primary-color;
+    padding: 15px 32px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: lighter;
+
+    @supports not (gap:10px) {
+       img { margin-left: 10px; }
+
+    }
+
+    span {
+       font-family: 'proxima-nova', sans-serif !important;
+       font-size: 16px;
+       letter-spacing: 0.16px;
+    }
+
+    &:hover {
+       // span { color: black }
+       filter: brightness(1.05);
+
+       img { transform: translateX(4px); }
+    }
+
+
+
+      img {
+         width: 16px;
+         height: 16px;
+         transition: .2s;
+      }
+
+
+      &.is-loading {
+         background-color: gray;
+         pointer-events: none;
+         min-width: 135px;
+         span { display: none;}
+
+         &::after{
+				animation: spinAround 500ms infinite linear;
+				border: 2px solid #dbdbdb;
+				border-radius: 290486px;
+				border-right-color: transparent;
+				border-top-color: transparent;
+				content: "";
+				display: block;
+				height: 1em;
+				position: relative;
+				width: 1em;
+            margin: 0 auto;
+			}
+      }
+
+
+ }
+ 

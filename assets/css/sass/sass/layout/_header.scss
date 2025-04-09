@@ -1,0 +1,300 @@
+header{
+    @include transition(0.6s);
+    @include fixed($t: 0, $z: 200);
+    width: 100%;
+    background: #234F4C;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    z-index: 7000 !important;
+
+
+
+   .header-options {
+      display: flex;
+      gap: 40px;
+      justify-content: flex-end;
+      align-items: center;
+
+   }
+
+     .wide-full {
+      padding: 0 35px;
+     }
+
+       
+    .logo {
+      pointer-events: all;
+      display: flex;
+      align-items: center;
+      min-width: 90px;
+    }
+
+    .navbar-burger{
+       border-radius: 26px;
+       pointer-events: all;
+       display: block;
+       margin-left: 0;
+       transform: scale(1.3);
+       height: 2.6rem;
+       width: 3.2rem;
+       
+       span{
+
+          background-color: white;
+          color: white;
+
+          @include transition();
+          height: 2px;
+          border-radius: 5px;
+
+          &.black-burger {
+            color: black;
+            background-color: black;
+         }
+       }
+ 
+       &:hover{
+
+          span{
+             background-color: $primary-color;
+          }
+       }
+ 
+       &.is-active{
+          span{ background-color: #FFF; }
+ 
+          &:hover{
+             span{ background-color: $secondary-color; }
+          }
+       }
+    }
+ 
+ 
+    &.is-hide{
+       top: -125px;
+       .logo{ opacity: 0; }
+    }
+ 
+    &.is-compact{
+
+       
+    }
+ 
+ 
+    .logo{
+       // max-width: 256px;
+       margin: 0;
+       transition: all 1s cubic-bezier(0.38,0,.02,1);
+    }
+ 
+    .links{
+       @include transition(0.6s);
+      height: 100%;
+
+
+        ul {
+          display: flex;
+          height: 100%;
+          justify-content: flex-end;
+          align-items: center;
+          gap: 50px;
+
+          li a{
+            color: #F8F5EF;
+            font-size: 16px;
+            // font-weight: 500;
+            font-family: 'proxima-nova';
+            position: relative;
+            letter-spacing: 1px;
+
+            &:hover{
+              color: $secondary-color;
+
+
+
+              &:before{
+                width: 100%;
+              }
+            }
+
+            &.is-active{
+              color: $primary-color;
+
+              &:before{
+                width: 100%;
+              }
+            }
+          }
+      }
+ 
+
+    }
+
+    .button-container {
+      display: flex;
+      align-items: center;
+
+
+    }
+ }
+
+ 
+.menu{
+    @include fixed($t: 0, $r: -100%, $z: 9999);
+    display: flex;
+    width: 100%;
+    height: calc(100vh);
+    overflow: hidden;
+    transition: all 1s cubic-bezier(0.54, 0.18, 0.13, 1);
+    border: 37px solid white;
+    opacity: 0;
+    background-color: #F9F8F1;
+
+    &.is-active{
+       right: 0;
+       opacity: 1;
+    }
+ 
+    .wrap{
+      // padding-top: 18vh;
+       // padding-left: 100px;
+    }
+ 
+    .container-menu{
+       position: relative;
+       width: 100%;
+       height: 100vh;
+
+       ul {
+         height: 100vh;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+
+         li a { text-transform: uppercase; }
+       }
+    }
+ 
+    .bt-close-menu{
+       @include absolute($t: 65px, $r: 65px);
+       cursor: pointer;
+       @include transition(0.6s);
+       filter: invert(1);
+      z-index: 9999;
+
+       &:hover{
+          transform: scale(1.2) rotate(90deg);
+       }
+    }
+ 
+    .menu-item{
+       font-family: 'area-normal', sans-serif;
+       font-size: 1.2em;
+       color: black;
+       line-height: 3vh;
+       display: inline-block;
+       margin-bottom: 4.5vh;
+       letter-spacing: 1.5px;
+ 
+       &:hover, &.current{
+          color: $secondary-color;
+       }
+    }
+ }
+ 
+ 
+
+//  TABLET PORTRAIT
+@media only screen and (min-width: 577px) and (max-width: 768px){
+
+ header{
+
+   .header-options {
+     a {
+       //margin-left: 35px;
+     }
+   }
+
+
+ }
+
+ 
+}
+
+//  TABLET LANDSCAPE
+
+@media only screen and (min-width: 577px) and (max-width: 1024px){
+header {
+   .header-options {
+      display: flex;
+
+      gap: 40px;
+      justify-content: space-around;
+      align-items: center !important; 
+
+     a {
+     }
+
+     .logo-horizontes {
+       position: relative;
+       top: 5px;
+     }
+   }
+}
+
+}
+
+
+// smartphone
+@media only screen and (max-width: 576px) {
+header {
+   padding-top: 35px;
+   padding-right: 0px;;
+
+  .logo {
+    min-width: 70px;
+  }
+
+  .logo-horizontes {
+    svg { width: 130px; }
+  }
+
+   .header-options {
+      display: flex;
+      justify-content: flex-start;
+
+
+      .navbar-burger {
+        margin-left: auto;
+
+        span { height: 2px;  }
+      }
+
+
+   }
+}
+
+
+.menu{
+   right: -100%;
+   width: 100%;
+
+   // .wrap{ padding-top: 17vh; }
+   .bt-close-menu{ top: 26px; right: 25px; max-width: 25px; }
+   .menu-item{
+      margin-bottom: 6.2vh;
+      font-size: 1em;
+   }
+
+   .container-menu{
+      transition: .2s;
+      height: 100dvh;
+
+      ul {
+         transition: .2s;
+        height: 100dvh;
+      }
+   }
+}
+}

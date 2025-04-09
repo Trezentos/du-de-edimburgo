@@ -1,0 +1,173 @@
+<?php
+
+$pg = $_SEO["permalink"];
+
+?>
+<!doctype html>
+	<html class="no-js" lang="pt-BR">
+	<head>
+		<?php if(!LOCALHOST && !IS_LIGHTHOUSE) { // ANALYTICS ?>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo GOOGLE_ANALYTICS; ?>"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', '<?php echo GOOGLE_ANALYTICS; ?>');
+		</script>
+
+		<?php } ?>
+
+		<title><?php echo $_SEO["title"]; ?></title>
+
+		<!-- METATAGS -->
+		<meta charset="utf-8" />
+		<meta name="title" content="<?php echo $_SEO["title"]; ?>">
+		<meta name="description" content="<?php echo $_SEO["description"]; ?>" />
+
+		<link rel="canonical" href="<?php echo PageCanomical()?>" />
+		<link rel="stylesheet" href="https://use.typekit.net/bav3jmn.css">
+        <link rel="stylesheet" href="https://use.typekit.net/jqb8zsp.css">
+
+		<!-- FONTS -->
+		<link rel="stylesheet" href="https://use.typekit.net/uvp7hpg.css">
+
+
+
+
+		<!-- MOBILE -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="format-detection" content="telephone=no">
+		<meta name="Author" content="Quax - Sites & Sistemas (www.quax.com.br)" />
+
+		<!-- ICONS -->
+		<link rel="apple-touch-icon" sizes="57x57" href="<?php echo IMG ?>favicon/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="<?php echo IMG ?>favicon/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="<?php echo IMG ?>favicon/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="<?php echo IMG ?>favicon/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="<?php echo IMG ?>favicon/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="<?php echo IMG ?>favicon/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="<?php echo IMG ?>favicon/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="<?php echo IMG ?>favicon/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="<?php echo IMG ?>favicon/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="<?php echo IMG ?>favicon/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="<?php echo IMG ?>favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="<?php echo IMG ?>favicon/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="<?php echo IMG ?>favicon/favicon-16x16.png">
+		<link rel="manifest" href="<?php echo HTTP ?>/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="<?php echo IMG ?>favicon/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+
+
+
+		<meta property="og:site_name" content="<?php echo EMPRESA ?>">
+
+		<?php if($_SEO["ativarTag"]){ ?>
+		<meta property="og:title" content="<?php echo $_SEO["title_share"]; ?>">
+		<meta property="og:image" content="<?php echo IMG; ?>favicon/apple-icon-152x152.png">
+		<meta property="og:image:type"   content="image/jpeg">
+		<meta property="og:image:width"  content="150">
+		<meta property="og:image:height" content="150">
+		<meta property="og:description"  content="<?php echo $_SEO["desc_share"]; ?>">
+		<meta property="og:type" content="website">
+		<?php }else{ ?>
+			<meta property="og:image" content="<?php echo IMG; ?>favicon/apple-icon-152x152.png">
+			<meta property="og:image:type" content="image/png">
+		<?php } ?>
+
+		<script>const HTTP 		= "<?php echo HTTP ?>"</script>
+		<script>const PAGE 		= "<?php echo $pg ?>"</script>
+		<script>const IS_MOBILE = "<?php echo $MOBILE ?>"</script>
+		<script>const IS_TABLET = "<?php echo $TABLET ?>"</script>
+	
+		
+  		<?php echo style_enqueue('home','return'); ?>
+
+
+		<!-- INSERT CODE HEAD -->
+		<?php if( !IS_LIGHTHOUSE ) echo $qConfig->incorporar_head; ?>
+
+	</head>
+
+<body id="topo">
+
+
+	<header id="topo" class="">
+
+		<div class="wide-full">
+
+			<nav class="is-relative" role="navigation" aria-label="main navigation">
+
+				<div class="columns is-gapless is-mobile">
+
+					<div class="column ">
+						<nav class="links">
+                            <ul>
+                                <li><a href="">A GESSELE</a></li>
+                                <li><a href="">NOSSOS EMPREENDIMENTOS</a></li>
+                            </ul>
+                        </nav>
+					</div>
+
+
+					<div class="column is-3-desktop has-text-centered">
+                        <img src="<?=IMG.'main-logo.svg'?>" alt="">
+					</div>
+
+			
+					<div class="column is-flex is-align-content-center"
+                    >
+                        <div class="button-container">
+                            <a href="<?=HTTP?>" title="<?=EMPRESA?>" class="logo btn">
+                                <img src="<?=IMG.'icons/whats-icon.svg'?>" alt="">
+                                Fale com o comercial
+                            </a>
+                        </div>
+					</div>
+
+				</div>
+			
+			</nav>
+
+		</div>
+
+	</header>
+
+
+
+
+
+
+
+
+
+	<div class="menu waypoint animation_bottom" >
+		<div class="wrap">
+
+			<img class="bt-close-menu waypoint animation_scale" src="<?=IMG?>icons/close.svg" alt="Fechar">
+
+			<div class="container-menu has-text-centered">
+
+				<ul class="waypoint animation_right_dd1">
+					<li> <a href="#o-condominio"  		class="menu-item smooth-scroll-link">O Condomínio</a></li>
+					<li> <a href="#lotes" 		class="menu-item smooth-scroll-link">Lotes</a></li>
+					<li> <a href="#galeria" class="menu-item smooth-scroll-link">Galeria</a></li>
+					<li> <a href="#casas" 		class="menu-item smooth-scroll-link" >Casas</a></li>
+					<li> <a href="#balneario-camboriu" 		class="menu-item smooth-scroll-link" >Balneário Camboriú</a></li>
+					<li> <a href="#wzx" 	class="menu-item smooth-scroll-link" >WZX e Horizontes Urbanismo</a></li>
+					<li> <a href="#contato"  class="smooth-scroll-link menu-item">CONTATO</a></li>
+
+				</ul>
+
+			</div>
+
+		</div>
+	</div>
+
+<!-- MAIN -->
+<main class="smooth-scroll-container">
+    <div class="smooth-scroll-content">
