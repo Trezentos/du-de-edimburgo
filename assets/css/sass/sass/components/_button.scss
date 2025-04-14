@@ -3,26 +3,25 @@ button, .button{
     cursor: pointer; 
     transition: all 0.2s linear;
     padding: 15px 25px 14px;
-    font-family: 'proxima-nova';
+    font-family: $primary-font;
     font-weight: 400;
  }
  
 
  .btn{
     position: relative;
-    background: $secondary-color;
+    background: $primary-font-condensed;
+    font-family: $primary-font;
+    font-weight: 300;
     display: inline-block;
-    padding: 11px 32px 12px;
+    padding: 10px 32px;
     cursor: pointer;
     transition: all .2s linear;
     border-radius: 6px;
     height: auto;
     font-size: 16px;
-    // width: 400px;
     max-width: 100%;
     outline: none;
-    overflow: hidden;
-    // letter-spacing: 1px;
     @include text($color: #FFF, $size: 1.6em, $lh: 1.4, $weight: 400, $align: center);
  
     span{

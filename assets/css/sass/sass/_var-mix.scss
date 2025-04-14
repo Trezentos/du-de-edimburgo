@@ -5,15 +5,28 @@
 /* 100 -> Thin  ; 200 -> ExtraLight  ;  300 -> Light  ;  400 -> Regular  ;  500 -> Medium  ;  600  -> SemiBold  ;  700  -> Bold  ;  800  -> ExtraBold  ;  900  -> Black */
 
 
-
-
+//@font-face {
+//    font-family: 'Bahnschrift';
+//    src: url('../../../fonts/Bahnschrift.woff') format('woff2'),
+//    url('../../../fonts/Bahnschrift.woff') format('woff');
+//    font-weight: normal;
+//    font-style: normal;
+//    font-display: swap;
+//}
 
 // VARS
+
+$primary-font   : 'bahnschrift'; // 200 400 600 700
+$primary-font-condensed: 'bahnschrift-condensed'; // 200 300 400 600 700
+$primary-font-semicondensed: 'bahnschrift-semicondensed'; // 700 400
+$secondary-font: 'bickham-script-pro-3'; // 200 400 700
+
 
 $root-color:        #000;
 
 $primary-color:     #DAA749;
 $secondary-color:   #AF9A75;
+$green-color:       #234F4C;
 
 $light-background:  #F4EAD9;
 
@@ -27,6 +40,14 @@ $ll-gray:           #f0f6fe;
 $d-gray:            #d3cebb;
 $grey: $gray-color; $l-grey: $l-gray; $ll-grey: $ll-gray; $d-grey: $d-gray;
 
+.primary-font-condensed {
+    font-family: $primary-font-condensed, sans-serif !important; // 200 300 400 600 700
+}
+.primary-font-semicondensed {
+    font-family: $primary-font-semicondensed, sans-serif !important; // 700 400
+}
+
+.secondary-font { font-family: $secondary-font, 'sans-serif' !important;  }
 
 .is-absolute{ position: absolute; }
 
@@ -36,11 +57,11 @@ $grey: $gray-color; $l-grey: $l-gray; $ll-grey: $ll-gray; $d-grey: $d-gray;
 .bg-ll-gray{ background: $ll-gray !important; }
 .bg-root{ background: $root-color !important; }
 .bg-primary{ background: $primary-color !important; }
-.bg-secondary{ background: $secondary-color !important; }
+.bg-secondary{ background: $primary-font-condensed !important; }
 
 .color-root{ color: $root-color; }
 .color-primary{ color: $primary-color !important; }
-.color-secondary{ color: $secondary-color !important; }
+.color-secondary{ color: $primary-font-condensed !important; }
 .color-white{ color: #FFF !important; }
 .color-gray{ color: $gray-color !important }
 .color-gray-light{ color: #BBB !important }

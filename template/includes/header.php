@@ -32,7 +32,7 @@ $pg = $_SEO["permalink"];
         <link rel="stylesheet" href="https://use.typekit.net/jqb8zsp.css">
 
 		<!-- FONTS -->
-		<link rel="stylesheet" href="https://use.typekit.net/uvp7hpg.css">
+        <link rel="stylesheet" href="https://use.typekit.net/oed1sjk.css">
 
 
 
@@ -94,7 +94,9 @@ $pg = $_SEO["permalink"];
 	</head>
 
 <body id="topo">
-
+<!-- MAIN -->
+<main class="smooth-scroll-container">
+    <div class="smooth-scroll-content">
 
 	<header id="topo" class="">
 
@@ -123,7 +125,7 @@ $pg = $_SEO["permalink"];
                     >
                         <div class="button-container">
                             <a href="<?=HTTP?>" title="<?=EMPRESA?>" class="logo btn">
-                                <img src="<?=IMG.'icons/whats-icon.svg'?>" alt="">
+                                <img src="<?=IMG.'icons/whats-icon.svg'?>" class="whats-icon" alt="">
                                 Fale com o comercial
                             </a>
                         </div>
@@ -168,6 +170,3 @@ $pg = $_SEO["permalink"];
 		</div>
 	</div>
 
-<!-- MAIN -->
-<main class="smooth-scroll-container">
-    <div class="smooth-scroll-content">

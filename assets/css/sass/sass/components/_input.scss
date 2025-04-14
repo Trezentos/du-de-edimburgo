@@ -4,7 +4,7 @@ input, .input{
    padding: 8px 17px;
    padding-top: 11px !important;
    @include size(100%, auto);
-   @include text($secondary-color, $size: 15px);
+   @include text($primary-font-condensed, $size: 15px);
    outline: none;
    background: #FFF;
    font-family: 'area-normal', sans-serif;
