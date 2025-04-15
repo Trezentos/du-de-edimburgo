@@ -19,11 +19,11 @@ section.features-section {
          align-items: center;
 
          strong  {
-            font-size: 188px;
-            letter-spacing: -11.28px;
+            font-size: 130px;
+            letter-spacing: -8px;
             color: $secondary-color;
             font-family: $primary-font-semicondensed;
-            line-height: 173px;
+            line-height: 130px;
             position: relative;
             right: 9px;
          }
@@ -54,7 +54,7 @@ section.features-section {
             line-height: 31px;
             color: white;
             text-align: center;
-            margin-top: 28px;
+            margin-top: 12px;
             font-weight: 400;
          }
       }
@@ -62,12 +62,18 @@ section.features-section {
 
    a.btn {
       margin: 0 auto;
-      padding-top: 14px;
-      padding-bottom: 15px;
-      font-size: 32px !important;
+
       font-family: $primary-font-condensed;
       font-weight: 200;
       background-color: $secondary-color;
+
+      //padding-top: 14px;
+      //padding-bottom: 15px;
+      //font-size: 32px !important;
+
+      font-size: 24px !important;
+      padding-top: 11px;
+      padding-bottom: 14px;
    }
 
    .planta-background {
@@ -81,15 +87,17 @@ section.features-section {
 section.short-section {
    background: $green-color;
    padding: 0;
-   height: 140px;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   text-align: center;
 
    p {
       color: white;
-      font-size: 48px;
+      font-size: 32px;
 
       span {
          font-family: $secondary-font;
-         font-size: 127px;
+         font-size: 90px;
          line-height: 135px;
 
       }
@@ -97,21 +105,22 @@ section.short-section {
 }
 
 section.gessele-apresenta {
-   padding-top: 140px;
+   padding-top: 90px;
    background-repeat: no-repeat;
 
    .container {
 
+
+
       img {
-         width: 538px;
-         margin-bottom: 95px;
+         width: 320px;
+         margin-bottom: 70px;
       }
 
-
-      //display: flex;
-      //flex-direction: column;
-      //align-items: center;
-      //justify-content: center;
+      > span {
+         font-size: 90px;
+         letter-spacing: 0;
+      }
 
       color: white;
       text-align: center;
@@ -119,7 +128,7 @@ section.gessele-apresenta {
       p {
          text-align: center;
          color: white;
-         font-size: 64px;
+         font-size: 48px;
          letter-spacing: 2.56px;
          font-family: $primary-font-condensed;
 
@@ -128,7 +137,7 @@ section.gessele-apresenta {
          }
    
          span {
-            font-size: 106px;
+            font-size: 90px;
             letter-spacing: 0;
          }
          
@@ -141,21 +150,21 @@ section.gessele-apresenta {
          backdrop-filter: blur(20px); /* desfoque de fundo */
          -webkit-backdrop-filter: blur(20px); /* para Safari */
          border-radius: 40px;
-         padding-bottom: 80px;
-         padding-top: 80px;
+         padding-bottom: 70px;
+         padding-top: 70px;
          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
          border: 3.5px solid rgba(255, 255, 255, 0.3);
 
          p {
             position: relative;
             z-index: 1; /* garante que o texto fique acima do blur */
-            font-size: 48px;
+            font-size: 36px;
             color: #fff; /* ou outra cor que contraste bem */
             letter-spacing: 1.92px;
          }
 
          span {
-            font-size: 114px;
+            font-size: 90px;
             font-weight: 100;
             line-height: 30px;
             letter-spacing: 4.56px;
@@ -170,6 +179,7 @@ section.gessele-apresenta {
 
 section.metric-section {
 
+
    .planta-background {
       position: absolute;
       top: 30px;
@@ -181,7 +191,7 @@ section.metric-section {
 
       h2 {
          color: $green-color;
-         font-size: 68px;
+         font-size: 48px;
          font-weight: 400;
          letter-spacing: 0;
 
@@ -189,7 +199,7 @@ section.metric-section {
          span {
             color: $secondary-color;
             text-transform: capitalize;
-            font-size: 168px;
+            font-size: 130px;
             line-height: 115px;
             letter-spacing: 0;
             font-weight: lighter;
@@ -250,7 +260,7 @@ section.metric-section {
                text-transform: uppercase;
                font-weight: bolder;
                color: $green-color;
-               margin-bottom: 5px;
+               margin-bottom: 25px;
                text-shadow:
                        -1px -1px 0 $secondary-color,
                        1px -1px 0 $secondary-color,
@@ -260,7 +270,7 @@ section.metric-section {
 
             img {
                margin-top: -30px;
-               margin-bottom: 35px;
+               margin-bottom: 45px;
             }
 
             p.description {
@@ -281,4 +291,426 @@ section.metric-section {
    }
 
 
+}
+
+section.philip-section {
+   background: $green-color;
+
+
+   @keyframes spin-animation {
+      from {
+         transform: rotate(0deg);
+      }
+
+      to {
+         transform: rotate(360deg);
+      }
+   }
+
+   .rounded-icon {
+      position: relative;
+      width: 223px;
+      height: 223px;
+      display: block;
+
+      .middle-content {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }
+
+   }
+
+   .spin {
+      animation: spin-animation 20s infinite linear;
+   }
+
+   .container {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      max-width: 100% !important;
+
+
+
+      .left-content {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+         flex: 1;
+
+         img {
+            width: 223px;
+            height: 223px;
+            display: block;
+         }
+
+         p, strong, span {
+            color: white;
+         }
+
+         p strong {
+            font-weight: bold;
+         }
+
+         p {
+            font-size: 32px;
+            letter-spacing: 0;
+
+            span {
+               color: $secondary-color;
+            }
+         }
+      }
+   }
+}
+
+.description-section {
+   .planta-background {
+      position: absolute;
+      bottom: 30px;
+      right: -110px;
+      z-index: -1;
+   }
+
+   h2 {
+      font-size: 90px;
+      font-weight: bolder;
+      margin-bottom: 0;
+      letter-spacing: 0;
+   }
+
+   strong {
+      font-weight: 600 !important;
+   }
+
+   p {
+      font-size: 24px;
+   }
+
+   .container, h2 {
+      color: $green-color;
+      text-align: center;
+   }
+
+   a.btn {
+      background: $green-color;
+      font-size: 36px;
+      font-weight: 100;
+      padding-bottom: 15px;
+      padding: 10px 12px !important;
+      padding-bottom: 14px !important;
+      font-size: 28px !important;
+   }
+}
+
+
+section.localizacao {
+   background-color: $green-color;
+   text-align: center;
+   padding-top: 50px;
+   padding-bottom: 0px;
+
+   h2, span, a {
+      color: $secondary-color;
+   }
+
+   h2 {
+      font-size: 58px;
+      line-height: 38px;
+      letter-spacing: 0;
+      margin-bottom: 10px;
+      font-weight: 400;
+
+      span {
+         font-size: 116px;
+         line-height: 94px;
+         letter-spacing: 0px;
+      }
+   }
+
+   a {
+      background-color: $secondary-color;
+      color: white;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+   }
+
+   span {
+      color: white;
+   }
+
+   .map-container {
+      position: relative;
+      height: 600px;
+      width: 100%;
+   }
+
+   .map-container iframe {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: relative;
+      z-index: 1;
+      pointer-events: none;
+
+   }
+
+   .map-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #BCA582;
+      mix-blend-mode: color; /* ou overlay, color, soft-light, etc */
+      opacity: 0.8; /* ajuste como quiser */
+      pointer-events: none;
+      z-index: 2;
+   }
+}
+
+section.talk-to-us-section {
+   background-color: $green-color;
+   padding-top: 80px;
+   padding-bottom: 80px;
+
+   color: white;
+
+   p {
+      font-size: 32px;
+      //position: relative;
+      //right: 148px;
+   }
+   
+   a.btn {
+      background-color: $secondary-color;
+      letter-spacing: 0;
+      margin: 0 auto;
+      font-weight: 500;
+      font-size: 24px !important;
+      padding: 15px;
+      padding-top: 11px;
+      padding-bottom: 14px;
+
+   }
+}
+
+// Smartphone
+@media(max-width: 578px){
+   section.features-section {
+      z-index: 0;
+      padding-bottom: 60px;
+
+      .planta-background {
+         bottom: 920px;
+         right: -90px;
+      }
+
+      .numbers, .features {
+         flex-direction: column;
+         gap: 35px;
+
+         .number-item {
+            strong { font-size: 100px; line-height: 80px; }
+         }
+      }
+   }
+
+   .short-section {
+      padding: 0 !important;
+
+      p {
+         font-size: 21px !important;
+
+         span {
+            font-size: 54px !important;
+         }
+      }
+   }
+
+   section.gessele-apresenta {
+      //background-position-y: -170px;
+      background-position-y: 0px;
+      background-position-x: 100%;
+      background-size: cover;
+      padding-right: 10px;
+      padding-left: 10px;
+
+        .container {
+           img { width: 240px; }
+
+           img.by-gessele-img {
+              margin-bottom: 50px;
+           }
+
+           > span {
+              font-size: 54px !important;
+              line-height: 30px;
+              display: block;
+              margin-top: 40px;
+           }
+
+           p {
+              font-size: 32px;
+              line-height: 30px;
+              line-height: 60px;
+              span {
+                 font-size: 54px !important;
+
+              }
+           }
+
+           .glass-container {
+              padding: 60px 35px;
+
+              br {
+                 //display: none;
+              }
+
+              p {
+                 font-size: 24px;
+                 line-height: 40px;
+                 font-weight: 200;
+
+                 span {
+                    font-size: 80px !important;
+                    display: block;
+                    margin-bottom: 10px;
+                    line-height: 60px;
+                 }
+              }
+           }
+        }
+
+
+   }
+
+   section.metric-section {
+      .container {
+
+         h2 {
+            font-size: 24px;
+            min-width: 298px;
+
+            span {
+               line-height: 75px !important;
+               font-size: 140px;
+
+               //@include fs-vw(7);
+            }
+         }
+
+         .tipos-container {
+            flex-direction: column;
+            padding: 0 30px;
+            gap: 50px;
+
+
+
+            .tipo-box {
+               padding: 55px 45px;
+
+               img {
+                  width: 150px;
+                  margin-bottom: 30px;
+               }
+
+               .description {
+                  br { display: none; }
+               }
+
+               p.big {
+                  margin-bottom: 30px;
+               }
+            }
+         }
+
+         > p {
+            line-height: 40px;
+         }
+      }
+   }
+
+   section.philip-section {
+      padding-bottom: 0;
+
+      .wrap {
+         padding: 0;
+      }
+
+      .container {
+         flex-direction: column;
+
+         p {
+            padding: 0 50px;
+
+         }
+
+         p.big strong { font-size: 47px !important;}
+
+         .left-content {
+            .content {
+               text-align: center;
+
+               img.spin {
+                  margin: 0 auto;
+               }
+            }
+
+            .text-container {
+               text-align: center;
+
+
+               p br { display: none; }
+            }
+         }
+
+         .right-content {
+            img {
+               display: block;
+            }
+         }
+
+      }
+   }
+
+   section.description-section {
+      padding-top: 60px;
+      padding-bottom: 60px;
+
+      h2 {
+         font-size: 16vw;
+         line-height: 30px;
+         letter-spacing: 0;
+
+      }
+
+      .container {
+         p {
+            padding: 0 25px;
+            font-size: 20px;
+
+            br {
+               display: none;
+            }
+         }
+      }
+   }
+
+   section.localizacao {
+      h2 span {
+         line-height: 50px;
+         display: block;
+         margin-top: 20px;
+         margin-bottom: 63px;
+      }
+   }
+
+   section.talk-to-us-section {
+      img {
+         width: 70%;
+      }
+   }
 }

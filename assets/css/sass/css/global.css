@@ -233,6 +233,9 @@
 .mb90 {
   margin-bottom: 90px !important; }
 
+.mb95 {
+  margin-bottom: 95px !important; }
+
 .mb100 {
   margin-bottom: 100px !important; }
 
@@ -763,6 +766,9 @@
 
   .mb100-mobile {
     margin-bottom: 100px !important; }
+
+  .mb130-mobile {
+    margin-bottom: 130px !important; }
 
   .mr0-mobile {
     margin-right: 0 !important; }

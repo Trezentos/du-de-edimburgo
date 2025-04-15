@@ -32,7 +32,7 @@ $pg = $_SEO["permalink"];
         <link rel="stylesheet" href="https://use.typekit.net/jqb8zsp.css">
 
 		<!-- FONTS -->
-        <link rel="stylesheet" href="https://use.typekit.net/oed1sjk.css">
+      <link rel="stylesheet" href="https://use.typekit.net/oed1sjk.css">
 
 
 
@@ -98,7 +98,7 @@ $pg = $_SEO["permalink"];
 <main class="smooth-scroll-container">
     <div class="smooth-scroll-content">
 
-	<header id="topo" class="">
+	<header id="topo" class="pt50 pb50 pt40-mobile pb40-mobile">
 
 		<div class="wide-full">
 
@@ -106,7 +106,7 @@ $pg = $_SEO["permalink"];
 
 				<div class="columns is-gapless is-mobile">
 
-					<div class="column ">
+					<div class="column is-hidden-mobile">
 						<nav class="links">
                             <ul>
                                 <li><a href="">A GESSELE</a></li>
@@ -124,9 +124,13 @@ $pg = $_SEO["permalink"];
 					<div class="column is-flex is-align-content-center"
                     >
                         <div class="button-container">
-                            <a href="<?=HTTP?>" title="<?=EMPRESA?>" class="logo btn">
+                            <a href="<?=HTTP?>" title="<?=EMPRESA?>" class="logo btn is-hidden-mobile">
                                 <img src="<?=IMG.'icons/whats-icon.svg'?>" class="whats-icon" alt="">
                                 Fale com o comercial
+                            </a>
+
+                            <a href="<?=HTTP?>" title="<?=EMPRESA?>" class="logo btn is-hidden-tablet">
+                                Consulte
                             </a>
                         </div>
 					</div>

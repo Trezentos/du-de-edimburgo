@@ -1,11 +1,15 @@
-function PixelToNumber(numberPx){
-
-	return Number(String(numberPx).replace('px', ''));
-
-}
-
 jQuery(document).ready(function($)
 {
+
+	console.log('opa')
+	const mapContainer = document.querySelector('.map-container');
+	const iframeMap = mapContainer.querySelector('iframe');
+
+	mapContainer.addEventListener('click', (e)=>{
+		iframeMap.style.pointerEvents = 'all';
+		console.log('opa');
+
+	})
 
 
 	let menuOpen = false;

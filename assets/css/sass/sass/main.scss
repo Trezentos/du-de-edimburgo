@@ -1,16 +1,11 @@
 @charset "utf-8";
 @import './var-mix';
-@import 'poor-navigator';
 @import 'global';
 @import './base/typography';
 @import './pages/home';
 @import './sections/main-banners';
-@import 'sections/gallery-section';
-@import 'sections/parallax-section';
 @import './components/button.scss';
 @import './components/input.scss';
-@import './components/redes-sociais.scss';
-@import './components/whatssFloatButton';
 @import './layout/header.scss';
 @import './layout/footer.scss';
 @import './utils/animations';
@@ -54,7 +49,7 @@ body {
    padding: 0 10px;
 
    &.compact{ max-width: 1000px; }
-   &.wide{ max-width: 1455px; }
+   &.wide{ max-width: 1590px; }
 }
 
 .fancybox-container {

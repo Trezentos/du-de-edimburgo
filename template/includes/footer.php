@@ -2,9 +2,8 @@
 $pg = $_SEO["permalink"];
 ?>
 
-<footer class="pt130 pt140-mobile " id="contato">
-
-
+<footer class=" " id="contato">
+    <img src="<?=IMG.'gessele-empreendimentos.svg'?>" alt="">
 </footer>
 
 

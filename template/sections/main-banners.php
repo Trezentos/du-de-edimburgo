@@ -13,19 +13,23 @@
 		data-cycle-speed="1000"
 		data-cycle-pager="false"
 	>
-		<div class="cycle-pager waypoint animation_scale animated"></div>
+<!--		<div class="cycle-pager waypoint animation_scale animated"></div>-->
 
 <!--		--><?php //foreach($qBanners as $qBanner) { ?>
             <div class="li" style="background-image: url(<?= IMG.'banner.jpg' ?>); ">
 
-                <div class="text-container columns is-gapless">
+                <div class="text-container columns is-gapless is-relative">
                     <div class="column is-3-widescreen is-hidden-mobile"></div>
 
-                    <div class="column is-6-widescreen  is-relative animation_top_d1 animated">
+                    <div class="column is-6-widescreen   ">
                         <div class="oasis-container">
-                            <img src="<?=IMG.'oasis-main-text.svg'?>" class="mb70" alt="">
+<!--                            <img src="--><?php //=IMG.'oasis-main-text.svg'?><!--" class="mb100 oasis-text-img" alt="">-->
+                            <h1 class="mb95 mb50-mobile">
+                                Seu Oásis <br>
+                                <span class="secondary-font">acima de tudo</span>
+                            </h1>
                             <a href="" class="btn is-uppercase mb50">Agendar visita</a>
-                            <img src="<?=IMG.'by-gessele.svg'?>" class="mb40" alt="">
+                            <img src="<?=IMG.'by-gessele.svg'?>" class="mb40 mb50-mobile" alt="">
                             <img src="<?=IMG.'gessele-marker.svg'?>" alt="">
 
                         </div>

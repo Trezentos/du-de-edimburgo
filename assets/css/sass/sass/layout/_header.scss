@@ -137,10 +137,13 @@ header{
       margin-left: 30px;
 
       .btn {
+        padding: 6px 32px;
+        padding-bottom: 8px;
         padding-left: 80px;
         padding-right: 45px;
         font-size: 20px;
         font-family: $primary-font;
+        background-color: $secondary-color;
 
         .whats-icon {
           position: absolute;
@@ -265,52 +268,17 @@ header {
 // smartphone
 @media only screen and (max-width: 576px) {
 header {
-   padding-top: 35px;
-   padding-right: 0px;;
 
-  .logo {
-    min-width: 70px;
+  .button-container {
+    .btn {
+      padding-left: 45px;
+    }
   }
 
-  .logo-horizontes {
-    svg { width: 130px; }
-  }
-
-   .header-options {
-      display: flex;
-      justify-content: flex-start;
-
-
-      .navbar-burger {
-        margin-left: auto;
-
-        span { height: 2px;  }
-      }
-
-
-   }
 }
 
 
 .menu{
-   right: -100%;
-   width: 100%;
 
-   // .wrap{ padding-top: 17vh; }
-   .bt-close-menu{ top: 26px; right: 25px; max-width: 25px; }
-   .menu-item{
-      margin-bottom: 6.2vh;
-      font-size: 1em;
-   }
-
-   .container-menu{
-      transition: .2s;
-      height: 100dvh;
-
-      ul {
-         transition: .2s;
-        height: 100dvh;
-      }
-   }
 }
 }

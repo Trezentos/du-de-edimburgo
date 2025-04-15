@@ -30,16 +30,136 @@ if( !IS_LIGHTHOUSE )
 		'jquery.cycle2.min.js',
 		'jquery.fancybox.min.js',
 		'progress-item.js',
+        'main.js',
 		'parallax.js',
         !$MOBILE ? 'smooth-scroll.js' : '',
-
-
 	]);
 }
 
 
 get_header();
 ?>
+
+<?php include_once  TEMPLATE.'sections/main-banners.php'?>
+
+<section class="features-section">
+    <img src="<?=IMG.'planta-background.svg'?>" class="planta-background" alt="">
+    <div class="wrap has-text-centered">
+        <div class="numbers">
+            <div class="number-item">
+                <strong>44</strong>
+                <p>pavimentos</p>
+            </div>
+            <div class="number-item">
+                <strong>71</strong>
+                <p>aparamentos</p>
+            </div>
+            <div class="number-item">
+                <strong>44</strong>
+                <p>por andar</p>
+            </div>
+        </div>
+
+        <div class="features mt70 mb70">
+            <div class="feature-item">
+                <img src="<?=IMG.'icons/beach-icon.svg'?>" alt="">
+                <p>
+                    300m <br>
+                    da praia
+                </p>
+            </div>
+
+            <div class="feature-item">
+                <img src="<?=IMG.'icons/wave-icon.svg'?>" alt="">
+                <p>
+                    Quadra <br>
+                    Mar
+                </p>
+            </div>
+
+            <div class="feature-item">
+                <img src="<?=IMG.'icons/pin-icon.svg'?>" alt="">
+                <p>
+                    Localização <br>
+                    Privilegiada
+                </p>
+            </div>
+
+            <div class="feature-item">
+                <img src="<?=IMG.'icons/pier-icon.svg'?>" alt="">
+                <p>
+                    Próximo ao novo <br>
+                    Píer Turístico
+                </p>
+            </div>
+
+            <div class="feature-item">
+                <img src="<?=IMG.'icons/lotus-icon.svg'?>" alt="">
+                <p>
+                    Terraza Rooftpot <br>
+                    Wellness
+
+                </p>
+            </div>
+        </div>
+
+        <a href="" class="btn ">
+            SAIBA MAIS SOBRE O EMPREENDIMENTO
+        </a>
+    </div>
+
+
+</section>
+
+<section class="short-section">
+    <p><span>Seu refúgio</span> no alto da cidade.</p>
+</section>
+
+<section class="gessele-apresenta"
+         style="background-image: url(<?=IMG.($MOBILE ? 'gessele-apresenta-background-mobile.jpg' : 'gessele-apresenta-background.jpg')?>)"
+>
+    <div class="wrap">
+        <div class="container">
+            <img src="<?=IMG.'by-gessele-bege.svg'?>" class="by-gessele-img" alt="">
+
+            <p>
+                Apresenta <br>
+                <strong>Spa Villa Balmoral House</strong> <br>
+
+                <span class="secondary-font is-hidden-mobile">
+                    Um oásis para toda a
+                    família acima de tudo.
+                </span>
+            </p>
+
+            <span class="secondary-font is-hidden-tablet">
+                Um oásis para toda a <br class="is-hidden-tablet">
+                família acima de tudo.
+            </span>
+
+            <div class="glass-container mt60-mobile">
+                <div class="container">
+                    <p class="primary-font-condensed">
+                        <span class="secondary-font">Balmoral House:</span> <br class="is-hidden-mobile">
+                        Espaço exclusivo, inspirado na residência de <br class="is-hidden-mobile">
+                        veraneio da realeza britânica, ideal para encontros, <br class="is-hidden-mobile">
+                        celebrações e momentos  inesquecíveis. Sua casa de <br class="is-hidden-mobile">
+                        campo particular. <br><br>
+
+                        <span class="secondary-font mt20-mobile">
+                            Spa Villa:
+                        </span> <br class="is-hidden-mobile">
+                        Um refúgio nobre, um espaço wellness exclusivo, <br class="is-hidden-mobile">
+                        sofisticado e acolhedor, onde o luxo se encontra com <br class="is-hidden-mobile">
+                        o bem-estar.
+                    </p>
+                </div>
+            </div>
+
+            <span class="secondary-font mt60-mobile">Projetos de Spa e Paisagismo assinados.</span>
+        </div>
+    </div>
+</section>
 
 
 
@@ -49,7 +169,7 @@ get_header();
     <div class="wrap">
         <div class="container">
             <h2 class="title primary-font-semicondensed">
-                Ambientes nobres para um <br>
+                Ambientes dignos de uma <br><br class="is-hidden-tablet">
                 <span class="secondary-font">Família Real.</span>
             </h2>
 
@@ -73,24 +193,107 @@ get_header();
                 </div>
             </div>
 
-            <p class="secondary-font">O luxo feito sob medida para você.</p>
+            <p class="secondary-font mt100-mobile">O luxo feito sob medida para você.</p>
         </div>
 
 
     </div>
 </section>
 
-<section>
-      <div class="wrap">
+<section class="philip-section">
+      <div class="wrap wide">
           <div class="container">
               <div class="left-content">
-                  <img src="<?=IMG.'icons/philip-duque-icon.svg'?>" alt="">
+                  <div class="content">
+<!--                      <img class="mb30 spin"  src="--><?php //=IMG.'icons/philip-duque-icon.svg'?><!--" alt="">-->
+<!--                      --><?php //roundedLog() ?>
+                      <div class="rounded-icon ">
+                          <img src="<?=IMG.'rounded-circle.png'?>" alt="" class=" circle spin">
+                          <img src="<?=IMG.'rounded-circle-center.png'?>" alt="" class="middle-content">
+                      </div>
+
+                      <div class="text-container mt30">
+                          <p class="mb30 big">
+                              <strong>
+                                  Inspirado no <br>
+                                  <span>Duque de Edimburgo,</span> <br>
+                                  Inpirado em Você.
+                              </strong>
+                          </p>
+
+                          <p class="primary-font-condensed">
+                              <strong style="font-weight: 400;">Philip Duque de Edimburgo</strong> by Gessele é a <br>
+                              união entre tradição, inovação e <br>
+                              valorização dos momentos em família.
+                          </p>
+                      </div>
+                  </div>
               </div>
-              <div class="right-content">
-                  <img src="<?=IMG.'philip-duque-familia.jpg'?>" alt=""></img>
+              <div class="right-content mt80-mobile">
+                  <img src="<?=IMG.'philip-duque-familia.jpg'?>" alt="">
               </div>
           </div>
       </div>
+</section>
+
+<section class="description-section is-relative">
+    <img src="<?=IMG.'planta-white-background.svg'?>" class="planta-background" alt="">
+
+    <div class="wrap">
+       <div class="container">
+           <h2 class="secondary-font mb20-mobile">Um empreendimento nobre</h2>
+
+           <p class="primary-font-condensed">
+
+               O novo empreendimento – <strong>Philip Duque de Edimburgo</strong> – é um convite para viver em um <strong>verdadeiro oásis</strong> de paz e
+               <br>
+               sofisticação. Inspirado em Balmoral, reflete a harmonia entre a natureza exuberante e o conforto refinado da vida em
+               <br>
+               família, <strong>valorizando raízes, conexões e memórias duradouras.</strong> <br style="display: block">
+               Na privilegiada <strong>QUADRA MAR</strong>, cada detalhe foi pensado para oferecer uma experiência única de bem-estar. Aqui, o luxo se
+               <br>
+               revela na segurança que acolhe, na tecnologia que simplifica e no design que conecta. <br style="display: block" class="is-hidden-tablet">
+               <strong>No Terazza, um espaço wellness exclusivo</strong> convida ao relaxamento, com ambientes que elevam os sentidos e oferecem uma
+               <br>
+               pausa revigorante para corpo e mente, e uma casa de campo, um refúgio exclusivo projetado para a família.
+
+               <br style="display: block">
+               <br style="display: block">
+
+               <strong>BEM-ESTAR ELEVADO A UM NOVO PATAMAR. UM OÁSIS DE PAZ.</strong>
+           </p>
+
+           <a href="" class="btn primary-font-condensed mt20 mt40-mobile">
+               DESCUBRA COMO VIVER <br class="is-hidden-tablet">
+               UMA VIDA NOBRE
+           </a>
+       </div>
+    </div>
+</section>
+
+<section class="localizacao">
+    <h2 class="primary-font-semicondensed">
+        Uma Localização <br>
+        <span class="secondary-font">Exclusiva e Estratégica</span>
+    </h2>
+    <a href="#mapa" class="btn mb90 menu-item">
+        VEJA NO MAPA
+    </a>
+
+    <div class="map-container">
+        <div class="map-overlay"></div>
+        <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1492.760692680906!2d-48.590836944306815!3d-27.143599130464153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d8afb7ab34fd9b%3A0xbe7dcfd2bd2380ea!2sAv.%20Nereu%20Ramos%20%26%20Rua%20313-B%20-%20Castelo%20Branco%2C%20Itapema%20-%20SC%2C%2088220-000!5e0!3m2!1spt-BR!2sbr!4v1744655238128!5m2!1spt-BR!2sbr" width="100%" height="800" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</section>
+
+<section class="talk-to-us-section has-text-centered ">
+    <img src="<?=IMG.'main-logo.svg'?>" alt="">
+
+    <p class="mt20 mt100-mobile mb70-mobile mb40 primary-font-condensed">Saiba mais sobre o <br class="is-hidden-tablet"> empreendimento.</p>
+
+    <a href="" class="btn primary-font-condensed ">
+        CONVERSE COM O NOSSO TIME
+    </a>
 </section>
 
 <?php get_footer(); ?>

@@ -12,6 +12,12 @@ p {
    font-weight: 100;
    letter-spacing: 0px;
 
+   &.big {
+      font-size: 47px !important;
+      line-height: 49px;
+
+   }
+
    &.bigger {
       font-size: 2em;
       @include fs-vw(2);
@@ -173,6 +179,10 @@ address{ font-style: normal; }
       &.bigger {
          @include fs-vw(2, 440);
          line-height: 30px;
+      }
+
+      &.big {
+         font-size: 62px !important;
       }
    }
 }
