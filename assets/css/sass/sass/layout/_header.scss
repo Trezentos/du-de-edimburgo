@@ -135,6 +135,7 @@ header{
       align-items: center;
       position: relative;
       margin-left: 30px;
+      height: 100%;
 
       .btn {
         padding: 6px 32px;
@@ -221,7 +222,16 @@ header{
        }
     }
  }
- 
+
+
+// Notebook
+@media only screen and (min-width: 1025px) and (max-width: 1499px) {
+  header {
+    &.pt50 { padding-top: 30px !important; }
+    &.pt50 { padding-bottom: 30px !important;}
+  }
+}
+
  
 
 //  TABLET PORTRAIT
@@ -229,12 +239,30 @@ header{
 
  header{
 
-   .header-options {
-     a {
-       //margin-left: 35px;
+   nav.links {
+     padding-left: 0;
+     padding-right: 0 !important;
+
+     ul {
+       gap: 20px;
+       
+       li {
+         text-align: center;
+       }
      }
    }
 
+   .main-logo {
+     width: 150px !important;
+   }
+
+   .button-container {
+     margin-right: 0 !important;
+
+     .btn {
+       padding: 6px 32px !important;
+     }
+   }
 
  }
 
@@ -242,27 +270,29 @@ header{
 }
 
 //  TABLET LANDSCAPE
-
 @media only screen and (min-width: 577px) and (max-width: 1024px){
 header {
-   .header-options {
-      display: flex;
-
-      gap: 40px;
-      justify-content: space-around;
-      align-items: center !important; 
-
-     a {
-     }
-
-     .logo-horizontes {
-       position: relative;
-       top: 5px;
-     }
+   nav.links {
+     padding-right: 40px;
    }
+
+  nav.links ul {
+    justify-content: flex-start;
+  }
+
+  .button-container {
+    height: 100%;
+    justify-content: flex-end;
+
+    .btn {
+      padding-left: 45px;
+    }
+  }
 }
 
 }
+
+
 
 
 // smartphone

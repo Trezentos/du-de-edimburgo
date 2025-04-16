@@ -19,12 +19,9 @@
             <div class="li" style="background-image: url(<?= IMG.'banner.jpg' ?>); ">
 
                 <div class="text-container columns is-gapless is-relative">
-                    <div class="column is-3-widescreen is-hidden-mobile"></div>
-
-                    <div class="column is-6-widescreen   ">
+                    <div class="column is-12-widescreen  " style="height: 100%;">
                         <div class="oasis-container">
-<!--                            <img src="--><?php //=IMG.'oasis-main-text.svg'?><!--" class="mb100 oasis-text-img" alt="">-->
-                            <h1 class="mb95 mb50-mobile">
+                            <h1 class="mb95 mb50-tablet mb50-mobile">
                                 Seu Oásis <br>
                                 <span class="secondary-font">acima de tudo</span>
                             </h1>
@@ -35,7 +32,6 @@
                         </div>
                     </div>
 
-                    <div class="column is-3-widescreen  is-hidden-mobile"></div>
                 </div>
             </div>
 <!--		--><?php //} ?>

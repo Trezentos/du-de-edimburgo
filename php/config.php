@@ -48,7 +48,7 @@ if(LOCALHOST) {
 	define('DB_USER','quaxxcom_padrao');
 	define('DB_PASS','XHMfhXq=GIx');
 	define('DB_HOST','localhost');
-	define('DB_NAME','quaxxcom_reserva-do-sol');
+	define('DB_NAME','quaxxcom_duque-de-edimburgo');
 	define('PREFIX','adm_');
 	define('ROOT',$_SERVER['DOCUMENT_ROOT'].'/clientes/reserva-do-sol');
 	define('HTTP','https://'.$_SERVER['HTTP_HOST'].'/clientes/reserva-do-sol');

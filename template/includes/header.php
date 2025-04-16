@@ -98,7 +98,7 @@ $pg = $_SEO["permalink"];
 <main class="smooth-scroll-container">
     <div class="smooth-scroll-content">
 
-	<header id="topo" class="pt50 pb50 pt40-mobile pb40-mobile">
+	<header id="topo" class="pt50 pb50 pt30-tablet pb30-tablet pt40-mobile pb40-mobile ">
 
 		<div class="wide-full">
 
@@ -107,7 +107,7 @@ $pg = $_SEO["permalink"];
 				<div class="columns is-gapless is-mobile">
 
 					<div class="column is-hidden-mobile">
-						<nav class="links">
+						<nav class="links waypoint animation_left">
                             <ul>
                                 <li><a href="">A GESSELE</a></li>
                                 <li><a href="">NOSSOS EMPREENDIMENTOS</a></li>
@@ -117,15 +117,15 @@ $pg = $_SEO["permalink"];
 
 
 					<div class="column is-3-desktop has-text-centered">
-                        <img src="<?=IMG.'main-logo.svg'?>" alt="">
+                        <img src="<?=IMG.'main-logo.svg'?>" class="waypoint animation_bottom main-logo" alt="">
 					</div>
 
 			
-					<div class="column is-flex is-align-content-center"
+					<div class="column "
                     >
-                        <div class="button-container">
+                        <div class="button-container waypoint animation_right">
                             <a href="<?=HTTP?>" title="<?=EMPRESA?>" class="logo btn is-hidden-mobile">
-                                <img src="<?=IMG.'icons/whats-icon.svg'?>" class="whats-icon" alt="">
+                                <img src="<?=IMG.'icons/whats-icon.svg'?>" class="whats-icon is-hidden-tablet-only" alt="">
                                 Fale com o comercial
                             </a>
 

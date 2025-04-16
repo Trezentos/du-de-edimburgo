@@ -1,5 +1,6 @@
 
 
+.contador.animated { opacity: 1 }
 
 section.features-section {
    background: #3B3B3B;
@@ -55,6 +56,7 @@ section.features-section {
             color: white;
             text-align: center;
             margin-top: 12px;
+            width: 180px;
             font-weight: 400;
          }
       }
@@ -497,6 +499,151 @@ section.talk-to-us-section {
    }
 }
 
+
+
+// Notebook
+@media only screen and (min-width: 1025px) and (max-width: 1499px) {
+   section.philip-section {
+      .container {
+
+         .right-content {
+            img {
+               width: 650px;
+            }
+         }
+      }
+   }
+}
+
+
+
+// Tablet landscape
+@media only screen and (min-width: 577px) and (max-width: 1024px){
+
+   section.features-section {
+      z-index: 0;
+
+      .features {
+         flex-wrap: wrap;
+         gap: 0;
+         justify-content: center;
+         row-gap: 40px;
+         column-gap: 20px;
+      }
+   }
+
+   section.gessele-apresenta {
+      .container {
+         padding-left: 20px;
+         padding-right: 20px;
+
+
+         span {
+            line-height: 45px !important;
+         }
+
+         .glass-container {
+            margin-top: 40px;
+            margin-bottom: 60px;
+         }
+
+      }
+
+      span.sign-title {
+         line-height: 70px !important;
+      }
+
+   }
+
+   section.metric-section {
+      padding-left: 20px;
+      padding-right: 20px;
+
+      .tipos-container {
+         gap: 55px;
+      }
+   }
+
+   section.philip-section {
+      .wide {
+        padding: 0;
+      }
+
+      .container {
+         display: grid;
+         grid-template-rows: 1fr;
+         grid-template-columns: 1fr 1fr;
+
+         .left-content {
+            padding: 0 10px;
+         }
+
+         .right-content {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+         }
+      }
+   }
+
+   section.description-section {
+
+      .container {
+         padding-left: 20px;
+         padding-right: 20px;
+      }
+
+      br {
+         display: none;
+      }
+   }
+
+   section.localizacao {
+      h2 {
+         line-height: 60px;
+      }
+   }
+
+}
+
+
+//  TABLET PORTRAIT
+@media only screen and (min-width: 577px) and (max-width: 768px){
+
+section.metric-section {
+
+}
+
+section.philip-section {
+   padding-bottom: 0;
+   padding-top: 0;
+
+   .container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 620px 1fr;
+
+      .left-content {
+         .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 0 20px;
+
+            br {
+               display: none;
+            }
+         }
+      }
+
+   }
+}
+
+}
+
+
 // Smartphone
 @media(max-width: 578px){
    section.features-section {
@@ -654,9 +801,10 @@ section.talk-to-us-section {
             .content {
                text-align: center;
 
-               img.spin {
+               .rounded-icon {
                   margin: 0 auto;
                }
+
             }
 
             .text-container {

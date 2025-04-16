@@ -127,6 +127,11 @@ address{ font-style: normal; }
 
 // TABLET LANDSCAPE
 @media only screen and (min-width: 577px) and (max-width: 1024px){
+
+   .secondary-font {
+      line-height: 70px !important;
+   }
+
    p {
 
       &.bigger {
@@ -182,7 +187,7 @@ address{ font-style: normal; }
       }
 
       &.big {
-         font-size: 62px !important;
+         //font-size: 62px !important;
       }
    }
 }

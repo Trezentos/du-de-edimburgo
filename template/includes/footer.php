@@ -2,7 +2,7 @@
 $pg = $_SEO["permalink"];
 ?>
 
-<footer class=" " id="contato">
+<footer class="waypoint animation_bottom " id="contato">
     <img src="<?=IMG.'gessele-empreendimentos.svg'?>" alt="">
 </footer>
 

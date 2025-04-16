@@ -29,9 +29,8 @@ if( !IS_LIGHTHOUSE )
 		'jquery.maskedinput.js',
 		'jquery.cycle2.min.js',
 		'jquery.fancybox.min.js',
-		'progress-item.js',
         'main.js',
-		'parallax.js',
+        'counting-animation.js',
         !$MOBILE ? 'smooth-scroll.js' : '',
 	]);
 }
@@ -46,22 +45,22 @@ get_header();
     <img src="<?=IMG.'planta-background.svg'?>" class="planta-background" alt="">
     <div class="wrap has-text-centered">
         <div class="numbers">
-            <div class="number-item">
-                <strong>44</strong>
-                <p>pavimentos</p>
+            <div class="number-item waypoint animation_top">
+                <strong class="waypoint contador">44</strong>
+                <p class="waypoint animation_left">pavimentos</p>
             </div>
-            <div class="number-item">
-                <strong>71</strong>
-                <p>aparamentos</p>
+            <div class="number-item waypoint animation_top_d1">
+                <strong class="waypoint contador" >71</strong>
+                <p class="waypoint animation_bottom">aparamentos</p>
             </div>
-            <div class="number-item">
-                <strong>44</strong>
-                <p>por andar</p>
+            <div class="number-item waypoint animation_top">
+                <strong class="waypoint contador">44</strong>
+                <p class="waypoint animation_right">por andar</p>
             </div>
         </div>
 
         <div class="features mt70 mb70">
-            <div class="feature-item">
+            <div class="feature-item waypoint animation_left">
                 <img src="<?=IMG.'icons/beach-icon.svg'?>" alt="">
                 <p>
                     300m <br>
@@ -69,7 +68,7 @@ get_header();
                 </p>
             </div>
 
-            <div class="feature-item">
+            <div class="feature-item waypoint animation_left_d1">
                 <img src="<?=IMG.'icons/wave-icon.svg'?>" alt="">
                 <p>
                     Quadra <br>
@@ -77,7 +76,7 @@ get_header();
                 </p>
             </div>
 
-            <div class="feature-item">
+            <div class="feature-item waypoint animation_bottom_d2">
                 <img src="<?=IMG.'icons/pin-icon.svg'?>" alt="">
                 <p>
                     Localização <br>
@@ -85,7 +84,7 @@ get_header();
                 </p>
             </div>
 
-            <div class="feature-item">
+            <div class="feature-item waypoint animation_right_d1">
                 <img src="<?=IMG.'icons/pier-icon.svg'?>" alt="">
                 <p>
                     Próximo ao novo <br>
@@ -93,7 +92,7 @@ get_header();
                 </p>
             </div>
 
-            <div class="feature-item">
+            <div class="feature-item waypoint animation_right">
                 <img src="<?=IMG.'icons/lotus-icon.svg'?>" alt="">
                 <p>
                     Terraza Rooftpot <br>
@@ -103,7 +102,7 @@ get_header();
             </div>
         </div>
 
-        <a href="" class="btn ">
+        <a href="" class="btn waypoint animation_bottom">
             SAIBA MAIS SOBRE O EMPREENDIMENTO
         </a>
     </div>
@@ -112,7 +111,7 @@ get_header();
 </section>
 
 <section class="short-section">
-    <p><span>Seu refúgio</span> no alto da cidade.</p>
+    <p class="waypoint animation_bottom"><span>Seu refúgio</span> no alto da cidade.</p>
 </section>
 
 <section class="gessele-apresenta"
@@ -120,9 +119,9 @@ get_header();
 >
     <div class="wrap">
         <div class="container">
-            <img src="<?=IMG.'by-gessele-bege.svg'?>" class="by-gessele-img" alt="">
+            <img src="<?=IMG.'by-gessele-bege.svg'?>" class="by-gessele-img waypoint animation_left" alt="">
 
-            <p>
+            <p class="waypoint animation_left">
                 Apresenta <br>
                 <strong>Spa Villa Balmoral House</strong> <br>
 
@@ -140,23 +139,23 @@ get_header();
             <div class="glass-container mt60-mobile">
                 <div class="container">
                     <p class="primary-font-condensed">
-                        <span class="secondary-font">Balmoral House:</span> <br class="is-hidden-mobile">
-                        Espaço exclusivo, inspirado na residência de <br class="is-hidden-mobile">
-                        veraneio da realeza britânica, ideal para encontros, <br class="is-hidden-mobile">
-                        celebrações e momentos  inesquecíveis. Sua casa de <br class="is-hidden-mobile">
+                        <span class="secondary-font">Balmoral House:</span> <br class="is-hidden-mobile ">
+                        Espaço exclusivo, inspirado na residência de <br class="is-hidden-mobile is-hidden-tablet-only">
+                        veraneio da realeza britânica, ideal para encontros, <br class="is-hidden-mobile is-hidden-tablet-only">
+                        celebrações e momentos  inesquecíveis. Sua casa de <br class="is-hidden-mobile is-hidden-tablet-only">
                         campo particular. <br><br>
 
                         <span class="secondary-font mt20-mobile">
                             Spa Villa:
-                        </span> <br class="is-hidden-mobile">
-                        Um refúgio nobre, um espaço wellness exclusivo, <br class="is-hidden-mobile">
-                        sofisticado e acolhedor, onde o luxo se encontra com <br class="is-hidden-mobile">
+                        </span> <br class="is-hidden-mobile ">
+                        Um refúgio nobre, um espaço wellness exclusivo, <br class="is-hidden-mobile is-hidden-tablet-only">
+                        sofisticado e acolhedor, onde o luxo se encontra com <br class="is-hidden-mobile is-hidden-tablet-only">
                         o bem-estar.
                     </p>
                 </div>
             </div>
 
-            <span class="secondary-font mt60-mobile">Projetos de Spa e Paisagismo assinados.</span>
+            <span class="secondary-font mt60-mobile sign-title waypoint animation_bottom">Projetos de Spa e Paisagismo assinados.</span>
         </div>
     </div>
 </section>
@@ -168,32 +167,49 @@ get_header();
     <img src="<?=IMG.'planta-white-background.svg'?>" class="planta-background" alt="">
     <div class="wrap">
         <div class="container">
-            <h2 class="title primary-font-semicondensed">
+            <h2 class="title primary-font-semicondensed waypoint animation_bottom">
                 Ambientes dignos de uma <br><br class="is-hidden-tablet">
                 <span class="secondary-font">Família Real.</span>
             </h2>
 
             <div class="tipos-container">
-                <div class="tipo-box">
-                    <p class="big">Tipo 1</p>
-                    <img src="<?=IMG.'icons/map-left.svg'?>" alt="">
-                    <p class="description primary-font-condensed">
-                        140,36 m² | 3 suítes <br>
-                        2 vagas
-                    </p>
-                </div>
-
-                <div class="tipo-box">
-                    <p class="big">Tipo 2</p>
-                    <img src="<?=IMG.'icons/map-right.svg'?>" alt="">
-                    <p class="description primary-font-condensed">
-                        141,81 m² | 3 suítes <br>
-                        2 vagas
-                    </p>
-                </div>
+                <a
+                        href="<?= IMG.'planta-1.png'?>"
+                        class="fancybox"
+                        title="Planta do tipo 1"
+                        rel="plantas"
+                        data-fancybox="galeria-apartamento"
+                        data-caption="Platna do tipo 1"
+                >
+                    <div class="tipo-box waypoint animation_left">
+                        <p class="big">Tipo 1</p>
+                        <img src="<?=IMG.'icons/map-left.svg'?>" alt="">
+                        <p class="description primary-font-condensed">
+                            140,36 m² | 3 suítes <br>
+                            2 vagas
+                        </p>
+                    </div>
+                </a>
+                <a
+                        href="<?= IMG.'planta-2.png'?>"
+                        class="fancybox"
+                        title="Planta do tipo 2"
+                        rel="plantas"
+                        data-fancybox="galeria-apartamento"
+                        data-caption="Platna do tipo 2"
+                >
+                    <div class="tipo-box waypoint animation_right">
+                        <p class="big">Tipo 2</p>
+                        <img src="<?=IMG.'icons/map-right.svg'?>" alt="">
+                        <p class="description primary-font-condensed">
+                            141,81 m² | 3 suítes <br>
+                            2 vagas
+                        </p>
+                    </div>
+                </a>
             </div>
 
-            <p class="secondary-font mt100-mobile">O luxo feito sob medida para você.</p>
+            <p class="secondary-font mt100-mobile waypoint animation_bottom">O luxo feito sob medida para você.</p>
         </div>
 
 
@@ -241,9 +257,9 @@ get_header();
 
     <div class="wrap">
        <div class="container">
-           <h2 class="secondary-font mb20-mobile">Um empreendimento nobre</h2>
+           <h2 class="secondary-font mb20-mobile waypoint animation_left">Um empreendimento nobre</h2>
 
-           <p class="primary-font-condensed">
+           <p class="primary-font-condensed waypoint animation_left">
 
                O novo empreendimento – <strong>Philip Duque de Edimburgo</strong> – é um convite para viver em um <strong>verdadeiro oásis</strong> de paz e
                <br>
@@ -263,7 +279,7 @@ get_header();
                <strong>BEM-ESTAR ELEVADO A UM NOVO PATAMAR. UM OÁSIS DE PAZ.</strong>
            </p>
 
-           <a href="" class="btn primary-font-condensed mt20 mt40-mobile">
+           <a href="" class="btn primary-font-condensed mt20 mt40-mobile waypoint animation_bottom">
                DESCUBRA COMO VIVER <br class="is-hidden-tablet">
                UMA VIDA NOBRE
            </a>
@@ -272,11 +288,11 @@ get_header();
 </section>
 
 <section class="localizacao">
-    <h2 class="primary-font-semicondensed">
+    <h2 class="primary-font-semicondensed waypoint animation_top">
         Uma Localização <br>
-        <span class="secondary-font">Exclusiva e Estratégica</span>
+        <span class="secondary-font ">Exclusiva e Estratégica</span>
     </h2>
-    <a href="#mapa" class="btn mb90 menu-item">
+    <a href="#mapa" class="btn mb90 menu-item waypoint animation_bottom">
         VEJA NO MAPA
     </a>
 
@@ -287,11 +303,11 @@ get_header();
 </section>
 
 <section class="talk-to-us-section has-text-centered ">
-    <img src="<?=IMG.'main-logo.svg'?>" alt="">
+    <img src="<?=IMG.'main-logo.svg'?>" class="waypoint animation_top" alt="">
 
-    <p class="mt20 mt100-mobile mb70-mobile mb40 primary-font-condensed">Saiba mais sobre o <br class="is-hidden-tablet"> empreendimento.</p>
+    <p class="mt20 mt100-mobile mb70-mobile mb40 primary-font-condensed waypoint animation_top">Saiba mais sobre o <br class="is-hidden-tablet"> empreendimento.</p>
 
-    <a href="" class="btn primary-font-condensed ">
+    <a href="" class="btn primary-font-condensed waypoint animation_bottom">
         CONVERSE COM O NOSSO TIME
     </a>
 </section>

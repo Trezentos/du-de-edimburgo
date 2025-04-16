@@ -1320,6 +1320,9 @@ address {
 .font-primary {
   font-family: "bahnschrift" !important; }
 
+@media only screen and (min-width: 577px) and (max-width: 1024px) {
+  .secondary-font {
+    line-height: 70px !important; } }
 @media only screen and (max-width: 576px) {
   h1, h2 {
     font-size: clamp(2.81em, 8.18vw, 3.6em);
@@ -1329,9 +1332,10 @@ address {
 
   p.bigger {
     font-size: clamp(1.56em, 4.55vw, 2em);
-    line-height: 30px; }
-  p.big {
-    font-size: 62px !important; } }
+    line-height: 30px; } }
+.contador.animated {
+  opacity: 1; }
+
 section.features-section {
   background: #3B3B3B;
   padding-top: 60px;
@@ -1374,6 +1378,7 @@ section.features-section {
         color: white;
         text-align: center;
         margin-top: 12px;
+        width: 180px;
         font-weight: 400; }
   section.features-section a.btn {
     margin: 0 auto;
@@ -1657,6 +1662,73 @@ section.talk-to-us-section {
     padding-top: 11px;
     padding-bottom: 14px; }
 
+@media only screen and (min-width: 1025px) and (max-width: 1499px) {
+  section.philip-section .container .right-content img {
+    width: 650px; } }
+@media only screen and (min-width: 577px) and (max-width: 1024px) {
+  section.features-section {
+    z-index: 0; }
+    section.features-section .features {
+      flex-wrap: wrap;
+      gap: 0;
+      justify-content: center;
+      row-gap: 40px;
+      column-gap: 20px; }
+
+  section.gessele-apresenta .container {
+    padding-left: 20px;
+    padding-right: 20px; }
+    section.gessele-apresenta .container span {
+      line-height: 45px !important; }
+    section.gessele-apresenta .container .glass-container {
+      margin-top: 40px;
+      margin-bottom: 60px; }
+  section.gessele-apresenta span.sign-title {
+    line-height: 70px !important; }
+
+  section.metric-section {
+    padding-left: 20px;
+    padding-right: 20px; }
+    section.metric-section .tipos-container {
+      gap: 55px; }
+
+  section.philip-section .wide {
+    padding: 0; }
+  section.philip-section .container {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr; }
+    section.philip-section .container .left-content {
+      padding: 0 10px; }
+    section.philip-section .container .right-content {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end; }
+
+  section.description-section .container {
+    padding-left: 20px;
+    padding-right: 20px; }
+  section.description-section br {
+    display: none; }
+
+  section.localizacao h2 {
+    line-height: 60px; } }
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  section.philip-section {
+    padding-bottom: 0;
+    padding-top: 0; }
+    section.philip-section .container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 620px 1fr; }
+      section.philip-section .container .left-content .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 20px; }
+        section.philip-section .container .left-content .content br {
+          display: none; } }
 @media (max-width: 578px) {
   section.features-section {
     z-index: 0;
@@ -1745,7 +1817,7 @@ section.talk-to-us-section {
         font-size: 47px !important; }
       section.philip-section .container .left-content .content {
         text-align: center; }
-        section.philip-section .container .left-content .content img.spin {
+        section.philip-section .container .left-content .content .rounded-icon {
           margin: 0 auto; }
       section.philip-section .container .left-content .text-container {
         text-align: center; }
@@ -1838,14 +1910,13 @@ section.talk-to-us-section {
         width: 440px;
         max-width: none; } }
   .main-banners .oasis-container {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    position: static;
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    justify-content: flex-end; }
     .main-banners .oasis-container a.btn {
       width: 280px;
       font-size: 24px;
@@ -1904,36 +1975,21 @@ section.talk-to-us-section {
 
 /************************* NOTEBOOK **************************/
 @media only screen and (min-width: 1025px) and (max-width: 1499px) {
+  .main-banners .mb95 {
+    margin-bottom: 40px !important; }
+  .main-banners .cycle-slideshow {
+    aspect-ratio: 1920 / 850; }
+    .main-banners .cycle-slideshow .li {
+      aspect-ratio: 1920 / 850; }
   .main-banners .main-logo {
     left: 0;
     transform: translate(0, -50%); } }
 /*********************** TABLET PORTRAIT **********************/
-@media only screen and (min-width: 577px) and (max-width: 769px) {
-  .main-banners .cycle-slideshow {
-    aspect-ratio: 1920/1050;
-    width: 100%;
-    height: auto; }
-    .main-banners .cycle-slideshow .li {
-      aspect-ratio: 1920/1050;
-      width: 100%;
-      height: auto !important; }
-      .main-banners .cycle-slideshow .li .text-container {
-        position: absolute;
-        top: 0; }
-      @supports not (aspect-ratio: 1) {
-        .main-banners .cycle-slideshow .li {
-          padding-top: calc(100% / 1.8286);
-          /* Aproximadamente 54.7% */ } }
-  .main-banners .main-logo {
-    left: 0;
-    transform: translate(0, -50%); }
-    .main-banners .main-logo h2 {
-      font-size: 7.4px;
-      margin-bottom: 28px; }
-    .main-banners .main-logo img {
-      width: 350px;
-      max-width: none; } }
 /*********************** TABLET LANDSCAPE ***********************/
+@media only screen and (min-width: 577px) and (max-width: 1024px) {
+  .main-banners .cycle-slideshow, .main-banners .cycle-slideshow .li {
+    aspect-ratio: unset;
+    height: calc(100vh - 138px); } }
 @media only screen and (max-width: 576px) {
   .main-banners {
     height: auto; }
@@ -2220,7 +2276,8 @@ header {
     display: flex;
     align-items: center;
     position: relative;
-    margin-left: 30px; }
+    margin-left: 30px;
+    height: 100%; }
     header .button-container .btn {
       padding: 6px 32px;
       padding-bottom: 8px;
@@ -2284,15 +2341,35 @@ header {
     .menu .menu-item:hover, .menu .menu-item.current {
       color: "bahnschrift-condensed"; }
 
+@media only screen and (min-width: 1025px) and (max-width: 1499px) {
+  header.pt50 {
+    padding-top: 30px !important; }
+  header.pt50 {
+    padding-bottom: 30px !important; } }
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  header nav.links {
+    padding-left: 0;
+    padding-right: 0 !important; }
+    header nav.links ul {
+      gap: 20px; }
+      header nav.links ul li {
+        text-align: center; }
+  header .main-logo {
+    width: 150px !important; }
+  header .button-container {
+    margin-right: 0 !important; }
+    header .button-container .btn {
+      padding: 6px 32px !important; } }
 @media only screen and (min-width: 577px) and (max-width: 1024px) {
-  header .header-options {
-    display: flex;
-    gap: 40px;
-    justify-content: space-around;
-    align-items: center !important; }
-    header .header-options .logo-horizontes {
-      position: relative;
-      top: 5px; } }
+  header nav.links {
+    padding-right: 40px; }
+  header nav.links ul {
+    justify-content: flex-start; }
+  header .button-container {
+    height: 100%;
+    justify-content: flex-end; }
+    header .button-container .btn {
+      padding-left: 45px; } }
 @media only screen and (max-width: 576px) {
   header .button-container .btn {
     padding-left: 45px; } }
