@@ -8,6 +8,7 @@ section.features-section {
    position: relative;
    z-index: -2;
 
+
    .numbers {
       display: flex;
       justify-content: center;
@@ -67,7 +68,7 @@ section.features-section {
 
       font-family: $primary-font-condensed;
       font-weight: 200;
-      background-color: $secondary-color;
+      //background-color: $secondary-color;
 
       //padding-top: 14px;
       //padding-bottom: 15px;
@@ -107,10 +108,42 @@ section.short-section {
 }
 
 section.gessele-apresenta {
-   padding-top: 90px;
+   padding: 90px 0;
+   padding-bottom: 60px;
    background-repeat: no-repeat;
 
+   position: relative;
+   overflow: hidden;
+
+   .sign-title {
+      display: block;
+      margin-top: 60px;
+      margin-top: 60px;
+   }
+
+   .background-image, canvas {
+      position: absolute;
+      right: 0;
+      top: 0;
+      //object-fit: cover;
+      z-index: -1;
+      width: 1920px;
+      height: 1839px !important;
+   }
+
+   .background-image {
+      background-size: cover;
+   }
+
+   canvas {
+      position: relative;
+      z-index: 10;
+      display: none !important;
+
+   }
+
    .container {
+
 
 
 
@@ -149,13 +182,17 @@ section.gessele-apresenta {
       .glass-container {
          position: relative;
          background: rgba(255, 255, 255, 0.1); /* fundo semi-transparente */
-         backdrop-filter: blur(20px); /* desfoque de fundo */
-         -webkit-backdrop-filter: blur(20px); /* para Safari */
+         //backdrop-filter: blur(20px); /* desfoque de fundo */
+         backdrop-filter: blur(0px); /* desfoque de fundo */
+         transition: 0.4s;
+         //-webkit-backdrop-filter: blur(20px); /* para Safari */
+         -webkit-backdrop-filter: blur(0px); /* para Safari */
          border-radius: 40px;
          padding-bottom: 70px;
          padding-top: 70px;
          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-         border: 3.5px solid rgba(255, 255, 255, 0.3);
+         //border: 3.5px solid rgba(255, 255, 255, 0.3);
+         border: 3.5px solid rgba(255, 255, 255, 0);
 
          p {
             position: relative;
@@ -163,6 +200,8 @@ section.gessele-apresenta {
             font-size: 36px;
             color: #fff; /* ou outra cor que contraste bem */
             letter-spacing: 1.92px;
+            transition: 0.4s;
+            opacity: 0;
          }
 
          span {
@@ -170,6 +209,18 @@ section.gessele-apresenta {
             font-weight: 100;
             line-height: 30px;
             letter-spacing: 4.56px;
+         }
+
+
+         // Smartphone
+         @media(max-width: 578px){
+            backdrop-filter: blur(20px); /* desfoque de fundo */
+            border: 3.5px solid rgba(255, 255, 255, 0.3);
+
+
+            p {
+               opacity: 1;
+            }
          }
       }
       
@@ -227,6 +278,7 @@ section.metric-section {
             border-radius: 40px;
             padding: 55px 65px;
             z-index: 1;
+            transition: 0.4s;
 
             // Remove a borda sólida padrão
             border: none;
@@ -263,16 +315,18 @@ section.metric-section {
                font-weight: bolder;
                color: $green-color;
                margin-bottom: 25px;
-               text-shadow:
-                       -1px -1px 0 $secondary-color,
-                       1px -1px 0 $secondary-color,
-                       -1px  1px 0 $secondary-color,
-                       1px  1px 0 $secondary-color;
+               //text-shadow:
+               //        -1px -1px 0 $secondary-color,
+               //        1px -1px 0 $secondary-color,
+               //        -1px  1px 0 $secondary-color,
+               //        1px  1px 0 $secondary-color;
             }
 
             img {
-               margin-top: -30px;
+               margin-top: -10px;
+               width: 180px;
                margin-bottom: 45px;
+               transition: 0.4s;
             }
 
             p.description {
@@ -281,11 +335,21 @@ section.metric-section {
                font-weight: 400;
                letter-spacing: 1.52px;
                line-height: 41px;
-               text-shadow:
-                       -1px -1px 0 $secondary-color,
-                       1px -1px 0 $secondary-color,
-                       -1px  1px 0 $secondary-color,
-                       1px  1px 0 $secondary-color;
+               //text-shadow:
+               //        -1px -1px 0 $secondary-color,
+               //        1px -1px 0 $secondary-color,
+               //        -1px  1px 0 $secondary-color,
+               //        1px  1px 0 $secondary-color;
+            }
+
+
+            &:hover {
+               background-color: #e3dfd6;
+
+               img {
+                  transform: translateY(5px);
+               }
+
             }
          }
       }
@@ -398,13 +462,13 @@ section.philip-section {
    }
 
    a.btn {
-      background: $green-color;
       font-size: 36px;
       font-weight: 100;
       padding-bottom: 15px;
-      padding: 10px 12px !important;
+      padding: 10px 55px !important;
       padding-bottom: 14px !important;
       font-size: 28px !important;
+      padding-bottom: 15px;
    }
 }
 
@@ -436,7 +500,7 @@ section.localizacao {
    a {
       background-color: $secondary-color;
       color: white;
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      //box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
    }
 
    span {
@@ -487,7 +551,7 @@ section.talk-to-us-section {
    }
    
    a.btn {
-      background-color: $secondary-color;
+      //background-color: $secondary-color;
       letter-spacing: 0;
       margin: 0 auto;
       font-weight: 500;
@@ -551,6 +615,7 @@ section.talk-to-us-section {
 
       span.sign-title {
          line-height: 70px !important;
+
       }
 
    }
@@ -685,51 +750,53 @@ section.philip-section {
       padding-right: 10px;
       padding-left: 10px;
 
-        .container {
-           img { width: 240px; }
 
-           img.by-gessele-img {
-              margin-bottom: 50px;
-           }
 
-           > span {
+     .container {
+        img { width: 240px; }
+
+        img.by-gessele-img {
+           margin-bottom: 50px;
+        }
+
+        > span {
+           font-size: 54px !important;
+           line-height: 30px;
+           display: block;
+           margin-top: 40px;
+        }
+
+        p {
+           font-size: 32px;
+           line-height: 30px;
+           line-height: 60px;
+           span {
               font-size: 54px !important;
-              line-height: 30px;
-              display: block;
-              margin-top: 40px;
+
+           }
+        }
+
+        .glass-container {
+           padding: 60px 35px;
+
+           br {
+              //display: none;
            }
 
            p {
-              font-size: 32px;
-              line-height: 30px;
-              line-height: 60px;
+              font-size: 24px;
+              line-height: 40px;
+              font-weight: 200;
+
               span {
-                 font-size: 54px !important;
-
-              }
-           }
-
-           .glass-container {
-              padding: 60px 35px;
-
-              br {
-                 //display: none;
-              }
-
-              p {
-                 font-size: 24px;
-                 line-height: 40px;
-                 font-weight: 200;
-
-                 span {
-                    font-size: 80px !important;
-                    display: block;
-                    margin-bottom: 10px;
-                    line-height: 60px;
-                 }
+                 font-size: 80px !important;
+                 display: block;
+                 margin-bottom: 10px;
+                 line-height: 60px;
               }
            }
         }
+     }
 
 
    }

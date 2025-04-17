@@ -2827,5 +2827,124 @@ body {
   text-transform: uppercase; }
 
 /************************* NOTEBOOK **************************/
+.box {
+  border-radius: 0;
+  box-shadow: none; }
 
-/*# sourceMappingURL=style.min.css.map */
+.section-cta {
+  height: 600px;
+  background: url(../img/bg-localizacao.webp) center top; }
+  .section-cta .wrap {
+    height: 100%; }
+
+.fancybox-caption__body {
+  color: #FFF;
+  background-color: black; }
+
+/* COOKIES */
+.cookies {
+  font-size: 14px;
+  position: fixed;
+  width: 1000px;
+  max-width: 100%;
+  z-index: 202;
+  bottom: 40px;
+  margin-left: 50%;
+  transform: translateX(-50%); }
+  .cookies .cookies-warning-box {
+    border-radius: 0px;
+    box-shadow: 6px 2px 48px -17px rgba(0, 0, 0, 0.75);
+    padding: 40px 50px 40px;
+    background-color: "bahnschrift-condensed";
+    text-align: justify; }
+    .cookies .cookies-warning-box h3 {
+      font-size: 24px; }
+  .cookies .cookies-warning-btn .btn {
+    font-size: 14px;
+    padding: 13px 30px 9px; }
+
+@media screen and (max-width: 767px) {
+  .cookies {
+    width: 90%;
+    bottom: 20px; }
+    .cookies .cookies-warning-box {
+      font-size: 14px;
+      padding: 30px 35px; }
+      .cookies .cookies-warning-box h3 {
+        font-size: 21px; }
+    .cookies .cookies-warning-text {
+      margin-bottom: 0; }
+    .cookies .btn {
+      min-width: 220px; } }
+/* ESTILIZAR A BARRA DE ROLAGEM  */
+::-webkit-scrollbar {
+  width: 5px; }
+
+::-webkit-scrollbar-track {
+  background: #EEE;
+  border-radius: 10px; }
+
+::-webkit-scrollbar-thumb {
+  background: #c1bfba;
+  border-radius: 10px; }
+
+/*********************** TABLET LANDSCAPE ***********************/
+@media only screen and (min-width: 577px) and (max-width: 1024px) {
+  .wrap {
+    padding: 0 20px; }
+
+  section {
+    padding: 60px 0; }
+
+  nav.links {
+    display: none; } }
+/*********************** TABLET PORTRAIT **********************/
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  section {
+    padding: 50px 0; }
+
+  .wrap {
+    padding: 0 30px; }
+
+  .menu .wrap {
+    padding: 0 20px; } }
+/************************* SMARTPHONE **************************/
+@media only screen and (max-width: 576px) {
+  body {
+    line-height: 1.7; }
+
+  .waypoint {
+    opacity: 0; }
+
+  .disable-animation-smartphone {
+    opacity: 1 !important;
+    animation: none !important; }
+    .disable-animation-smartphone * {
+      opacity: 1;
+      animation: none !important; }
+
+  section {
+    padding: 60px 0; }
+
+  .btn {
+    font-size: 15px;
+    max-width: 100%;
+    margin: 20px auto;
+    letter-spacing: 0px;
+    padding-left: 21px;
+    padding-right: 21px; }
+
+  /* SET ARROWS - OWL CAROUSEL */
+  .nav .nav-item {
+    margin: 0 5px 0 0; }
+    .nav .nav-item .box-item {
+      padding: 32px 0 40px;
+      font-size: 16px;
+      text-align: center;
+      border-radius: 4px; }
+    .nav .nav-item:after {
+      height: 4px; }
+    .nav .nav-item.is-active:after {
+      top: -10px; } }
+
+/*# sourceMappingURL=style.css.map */

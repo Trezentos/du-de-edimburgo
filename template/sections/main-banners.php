@@ -3,7 +3,7 @@
 ?>
 
 <!-- BANNER -->
-<section class="main-banners animation_top animated">
+<section class="main-banners">
 	<div 
 		class="cycle-slideshow" 
 		data-cycle-slides=".li" 
@@ -16,7 +16,7 @@
 <!--		<div class="cycle-pager waypoint animation_scale animated"></div>-->
 
 <!--		--><?php //foreach($qBanners as $qBanner) { ?>
-            <div class="li" style="background-image: url(<?= IMG.'banner.jpg' ?>); ">
+            <div class="li  animation_top animated" style="background-image: url(<?= IMG.'banner.jpg' ?>); ">
 
                 <div class="text-container columns is-gapless is-relative">
                     <div class="column is-12-widescreen  " style="height: 100%;">

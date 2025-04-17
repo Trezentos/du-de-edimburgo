@@ -91,6 +91,17 @@ $pg = $_SEO["permalink"];
 		<!-- INSERT CODE HEAD -->
 		<?php if( !IS_LIGHTHOUSE ) echo $qConfig->incorporar_head; ?>
 
+        <script type="importmap">
+            {
+              "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@v0.149.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.149.0/examples/jsm/"
+              }
+            }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
 	</head>
 
 <body id="topo">

@@ -10,7 +10,7 @@ button, .button{
 
  .btn{
     position: relative;
-    background: $primary-font-condensed;
+    background-color: $secondary-color;
     font-family: $primary-font;
     font-weight: 300;
     display: inline-block;
@@ -40,7 +40,19 @@ button, .button{
        margin-left: 10px;
        transform: translateY(3px);
     }
-    
+
+    &.green {
+       background: $green-color;
+
+
+       &:hover {
+          background: $green-color;
+          filter: brightness(1.15);
+          color: white;
+       }
+    }
+
+
     &.is-transparent{
        background: none;
        color: #5F584D;
@@ -61,7 +73,12 @@ button, .button{
     }
 
     &:hover {
-       color: white;
+
+       background-color: white;
+       color: $secondary-color;
+
+
+
     }
  }
 

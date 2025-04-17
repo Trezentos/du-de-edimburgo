@@ -1,6 +1,6 @@
 <?php
 
-# Apartamentos --------------------------------------------------------------------------------------------------- 
+# Apartamentos ---------------------------------------------------------------------------------------------------
 $qApartamentos = $db->get_results("SELECT * FROM ".$tables['EMPREENDIMENTOS']." WHERE status=1 ORDER BY ordem ASC");
 
 # BANNERS
@@ -11,7 +11,6 @@ $qBanners = $db->get_results("SELECT * FROM ".$tables['BANNERS']." WHERE status=
 $qGaleria = $db->get_results("SELECT * FROM ".$tables['GALERIA_IMG']." ORDER BY ordem ASC");
 
 global $MOBILE;
-                                    
 # -----------------------------------------------------------------------------------------------------------------
 
 
@@ -19,8 +18,8 @@ global $MOBILE;
 if( !IS_LIGHTHOUSE )
 {
 	add_style([
-		'css/owl.carousel.min.css', 
-		'css/owl.theme.default.min.css', 
+		'css/owl.carousel.min.css',
+		'css/owl.theme.default.min.css',
 		'css/jquery.fancybox.min.css'
 	]);
 
@@ -29,7 +28,9 @@ if( !IS_LIGHTHOUSE )
 		'jquery.maskedinput.js',
 		'jquery.cycle2.min.js',
 		'jquery.fancybox.min.js',
+        'ondulating-effect.js',
         'main.js',
+        'glass-animation.js',
         'counting-animation.js',
         !$MOBILE ? 'smooth-scroll.js' : '',
 	]);
@@ -117,6 +118,12 @@ get_header();
 <section class="gessele-apresenta"
          style="background-image: url(<?=IMG.($MOBILE ? 'gessele-apresenta-background-mobile.jpg' : 'gessele-apresenta-background.jpg')?>)"
 >
+    <img
+            src="<?=IMG.($MOBILE ? 'gessele-apresenta-background-mobile.jpg' : 'gessele-apresenta-background.jpg')?>"
+            alt=""
+            class="background-image"
+    >
+
     <div class="wrap">
         <div class="container">
             <img src="<?=IMG.'by-gessele-bege.svg'?>" class="by-gessele-img waypoint animation_left" alt="">
@@ -136,7 +143,7 @@ get_header();
                 família acima de tudo.
             </span>
 
-            <div class="glass-container mt60-mobile">
+            <div class="glass-container mt60-mobile <?= $MOBILE ? 'waypoint animation_bottom' : ''?>">
                 <div class="container">
                     <p class="primary-font-condensed">
                         <span class="secondary-font">Balmoral House:</span> <br class="is-hidden-mobile ">
@@ -279,7 +286,7 @@ get_header();
                <strong>BEM-ESTAR ELEVADO A UM NOVO PATAMAR. UM OÁSIS DE PAZ.</strong>
            </p>
 
-           <a href="" class="btn primary-font-condensed mt20 mt40-mobile waypoint animation_bottom_d1">
+           <a href="" class="btn green primary-font-condensed mt20 mt40-mobile waypoint animation_bottom_d1">
                DESCUBRA COMO VIVER <br class="is-hidden-tablet">
                UMA VIDA NOBRE
            </a>
