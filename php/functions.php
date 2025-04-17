@@ -363,7 +363,7 @@ function SendMailAdm($assunto, $mensagem, $reply=NULL, $debug=false, $emailAlter
 
 	$body = '<div style="width: 100%; background: #eeeeee; padding: 40px 0; text-align:center;">
 				<br><br>
-				<img src="'.IMG.'icons/reserva-do-sol-icon.png"><br><br>
+				<img src="'.IMG.'main-logo.png"><br><br>
 				<div style="color:#333; width:650px; text-align:left; background:#FFF; padding:30px; margin: 0 auto; font-size:14px; font-family:\'arial\'; border-top:4px solid #cf9b2d;">
 					'.$mensagem.'
 					<br>
@@ -415,7 +415,7 @@ function SendMailCliente($email, $assunto, $mensagem, $debug=false, $reply=NULL)
 	$body = '<div style="width: 100%; background: #eeeeee; padding: 40px 0; text-align:center;">
 				<div align="center" style="color: #999; font-size: 11px;">Este é um e-mail automático, você não precisa respondê-lo.</div>
 				<br><br>
-				<img src="'.IMG.'icons/reserva-do-sol-icon.png"><br><br>
+				<img src="'.IMG.'main-logo.png"><br><br>
 				<div style="color:#333; width:650px; text-align:left; background:#FFF; padding:30px; margin: 0 auto; font-size:14px; font-family:\'arial\'; border-top:4px solid #cf9b2d;">
 					'.$mensagem.'
 					<br><br>

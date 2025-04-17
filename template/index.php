@@ -223,13 +223,13 @@ get_header();
                   <div class="content">
 <!--                      <img class="mb30 spin"  src="--><?php //=IMG.'icons/philip-duque-icon.svg'?><!--" alt="">-->
 <!--                      --><?php //roundedLog() ?>
-                      <div class="rounded-icon ">
+                      <div class="rounded-icon waypoint animation_left">
                           <img src="<?=IMG.'rounded-circle.png'?>" alt="" class=" circle spin">
                           <img src="<?=IMG.'rounded-circle-center.png'?>" alt="" class="middle-content">
                       </div>
 
                       <div class="text-container mt30">
-                          <p class="mb30 big">
+                          <p class="mb30 big waypoint animation_left">
                               <strong>
                                   Inspirado no <br>
                                   <span>Duque de Edimburgo,</span> <br>
@@ -237,7 +237,7 @@ get_header();
                               </strong>
                           </p>
 
-                          <p class="primary-font-condensed">
+                          <p class="primary-font-condensed waypoint animation_bottom_d1">
                               <strong style="font-weight: 400;">Philip Duque de Edimburgo</strong> by Gessele é a <br>
                               união entre tradição, inovação e <br>
                               valorização dos momentos em família.
@@ -245,7 +245,7 @@ get_header();
                       </div>
                   </div>
               </div>
-              <div class="right-content mt80-mobile">
+              <div class="right-content mt80-mobile waypoint animation_right_d1">
                   <img src="<?=IMG.'philip-duque-familia.jpg'?>" alt="">
               </div>
           </div>
@@ -279,7 +279,7 @@ get_header();
                <strong>BEM-ESTAR ELEVADO A UM NOVO PATAMAR. UM OÁSIS DE PAZ.</strong>
            </p>
 
-           <a href="" class="btn primary-font-condensed mt20 mt40-mobile waypoint animation_bottom">
+           <a href="" class="btn primary-font-condensed mt20 mt40-mobile waypoint animation_bottom_d1">
                DESCUBRA COMO VIVER <br class="is-hidden-tablet">
                UMA VIDA NOBRE
            </a>

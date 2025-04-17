@@ -50,8 +50,8 @@ if(LOCALHOST) {
 	define('DB_HOST','localhost');
 	define('DB_NAME','quaxxcom_duque-de-edimburgo');
 	define('PREFIX','adm_');
-	define('ROOT',$_SERVER['DOCUMENT_ROOT'].'/clientes/reserva-do-sol');
-	define('HTTP','https://'.$_SERVER['HTTP_HOST'].'/clientes/reserva-do-sol');
+	define('ROOT',$_SERVER['DOCUMENT_ROOT'].'/clientes/duque-de-edimburgo');
+	define('HTTP','https://'.$_SERVER['HTTP_HOST'].'/clientes/duque-de-edimburgo');
 	define('SHIFT_NUM', 2);
 
 	define('AUTO_RELOAD',false);

@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,yBAKC;EAJD,WAAY;IACV,WAAW,EAAE,IAAI;AAKnB,yBAEC;EADC,wBAAyB;IAAE,WAAW,EAAE,IAAI;AAG9C,yBAYC;EAXC,wCAAyC;IACvC,WAAW,EAAE,IAAI;IAEjB,qDAAa;MACX,WAAW,EAAE,IAAI;MAEjB,uDAAE;QACA,aAAa,EAAE,IAAI",
-"sources": ["../sass/poor-navigator.scss"],
-"names": [],
-"file": "poor-navigator.css"
-}
