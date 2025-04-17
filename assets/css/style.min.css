@@ -1354,7 +1354,8 @@ section.features-section {
       section.features-section .numbers .number-item strong {
         font-size: 130px;
         letter-spacing: -8px;
-        color: #d7bc90;
+        color: #AF9A75;
+        color: #AF9A75;
         font-family: "bahnschrift-semicondensed";
         line-height: 130px;
         position: relative;
@@ -1386,6 +1387,7 @@ section.features-section {
     font-family: "bahnschrift-condensed";
     font-weight: 200;
     font-size: 24px !important;
+    padding: 80px;
     padding-top: 11px;
     padding-bottom: 14px; }
   section.features-section .planta-background {
@@ -1500,7 +1502,7 @@ section.metric-section .container {
     font-weight: 400;
     letter-spacing: 0; }
     section.metric-section .container h2 span {
-      color: #d7bc90;
+      color: #AF9A75;
       text-transform: capitalize;
       font-size: 130px;
       line-height: 115px;
@@ -1604,7 +1606,7 @@ section.philip-section {
         font-size: 32px;
         letter-spacing: 0; }
         section.philip-section .container .left-content p span {
-          color: #d7bc90; }
+          color: #AF9A75; }
 
 .description-section .planta-background {
   position: absolute;
@@ -1627,10 +1629,13 @@ section.philip-section {
   font-size: 36px;
   font-weight: 100;
   padding-bottom: 15px;
-  padding: 10px 55px !important;
+  padding: 10px 80px !important;
   padding-bottom: 14px !important;
   font-size: 28px !important;
   padding-bottom: 15px; }
+  @media (max-width: 578px) {
+    .description-section a.btn {
+      padding: 10px 30px !important; } }
 
 section.localizacao {
   background-color: #234F4C;
@@ -1638,19 +1643,28 @@ section.localizacao {
   padding-top: 50px;
   padding-bottom: 0px; }
   section.localizacao h2, section.localizacao span, section.localizacao a {
-    color: #d7bc90; }
+    color: #AF9A75; }
   section.localizacao h2 {
     font-size: 58px;
     line-height: 38px;
     letter-spacing: 0;
     margin-bottom: 10px;
-    font-weight: 400; }
+    font-weight: 400;
+    margin-bottom: 60px;
+    position: relative;
+    top: 20px; }
     section.localizacao h2 span {
       font-size: 116px;
       line-height: 94px;
       letter-spacing: 0px; }
+  @media (max-width: 578px) {
+    section.localizacao h2 {
+      font-size: 32px; }
+      section.localizacao h2 span {
+        font-size: 54px;
+        margin-top: 0px !important; } }
   section.localizacao a {
-    background-color: #d7bc90;
+    background-color: #AF9A75;
     color: white; }
   section.localizacao span {
     color: white; }
@@ -1693,7 +1707,9 @@ section.talk-to-us-section {
     font-size: 24px !important;
     padding: 15px;
     padding-top: 11px;
-    padding-bottom: 14px; }
+    padding-bottom: 14px;
+    padding-right: 80px;
+    padding-left: 80px; }
 
 @media only screen and (min-width: 1025px) and (max-width: 1499px) {
   section.philip-section .container .right-content img {
@@ -1795,7 +1811,7 @@ section.talk-to-us-section {
       margin-bottom: 50px; }
     section.gessele-apresenta .container > span {
       font-size: 54px !important;
-      line-height: 30px;
+      line-height: 36px;
       display: block;
       margin-top: 40px; }
     section.gessele-apresenta .container p {
@@ -1827,7 +1843,7 @@ section.talk-to-us-section {
     padding: 0 30px;
     gap: 50px; }
     section.metric-section .container .tipos-container .tipo-box {
-      padding: 55px 45px; }
+      padding: 55px 35px; }
       section.metric-section .container .tipos-container .tipo-box img {
         width: 150px;
         margin-bottom: 30px; }
@@ -1864,8 +1880,8 @@ section.talk-to-us-section {
     padding-bottom: 60px; }
     section.description-section h2 {
       font-size: 16vw;
-      line-height: 30px;
-      letter-spacing: 0; }
+      letter-spacing: 0;
+      line-height: 42px; }
     section.description-section .container p {
       padding: 0 25px;
       font-size: 20px; }
@@ -1877,6 +1893,8 @@ section.talk-to-us-section {
     display: block;
     margin-top: 20px;
     margin-bottom: 63px; }
+  section.localizacao h2 {
+    margin-bottom: 90px !important; }
 
   section.talk-to-us-section img {
     width: 70%; } }
@@ -1951,9 +1969,9 @@ section.talk-to-us-section {
     align-items: center;
     justify-content: flex-end; }
     .main-banners .oasis-container a.btn {
-      width: 280px;
       font-size: 24px;
       display: flex;
+      padding: 80px;
       padding-top: 11px;
       padding-bottom: 14px;
       align-items: center;
@@ -2065,7 +2083,7 @@ button, .button {
 
 .btn {
   position: relative;
-  background-color: #d7bc90;
+  background-color: #AF9A75;
   font-family: "bahnschrift";
   font-weight: 300;
   display: inline-block;
@@ -2107,7 +2125,14 @@ button, .button {
     background: #000; }
   .btn:hover {
     background-color: white;
-    color: #d7bc90; }
+    color: #AF9A75; }
+  @media (max-width: 578px) {
+    .btn {
+      padding-left: 30px !important;
+      padding-right: 30px !important; }
+      .btn.green {
+        padding-left: 30px !important;
+        padding-right: 30px !important; } }
 
 .action-button {
   transition: .2s;
@@ -2432,13 +2457,37 @@ footer {
 
 /* QUAX ASSINATURA */
 .quax-assinatura {
-  text-align: center; }
+  color: #FFF;
+  font-size: 12px;
+  text-align: center;
+  border-bottom: 8px solid #234F4C;
+  position: relative;
+  margin-top: -48px;
+  padding-top: 0;
+  z-index: 0; }
+  .quax-assinatura .logo-quax {
+    width: 80px;
+    margin: 0 auto;
+    display: block;
+    position: relative; }
+    .quax-assinatura .logo-quax img {
+      width: 20px;
+      position: absolute;
+      bottom: 1px;
+      left: 30px; }
+  .quax-assinatura .arrow-up {
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 40px solid #234F4C; }
 
 /* FIM QUAX ASSINTAURA */
 @media only screen and (max-width: 576px) {
   footer {
     padding-top: 50px;
-    padding-bottom: 50px; }
+    padding-bottom: 70px; }
     footer img {
       width: 220px; } }
 /* ANIMATIONS */

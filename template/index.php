@@ -43,7 +43,7 @@ get_header();
 <?php include_once  TEMPLATE.'sections/main-banners.php'?>
 
 <section class="features-section">
-    <img src="<?=IMG.'planta-background.svg'?>" class="planta-background" alt="">
+    <img src="<?=IMG.'planta-background.svg'?>" class="planta-background is-hidden-mobile" alt="">
     <div class="wrap has-text-centered">
         <div class="numbers">
             <div class="number-item waypoint animation_top">
@@ -130,7 +130,7 @@ get_header();
 
             <p class="waypoint animation_left">
                 Apresenta <br>
-                <strong>Spa Villa Balmoral House</strong> <br>
+                <strong>Spa Villa & Balmoral House</strong> <br>
 
                 <span class="secondary-font is-hidden-mobile">
                     Um oásis para toda a
@@ -149,8 +149,10 @@ get_header();
                         <span class="secondary-font">Balmoral House:</span> <br class="is-hidden-mobile ">
                         Espaço exclusivo, inspirado na residência de <br class="is-hidden-mobile is-hidden-tablet-only">
                         veraneio da realeza britânica, ideal para encontros, <br class="is-hidden-mobile is-hidden-tablet-only">
-                        celebrações e momentos  inesquecíveis. Sua casa de <br class="is-hidden-mobile is-hidden-tablet-only">
-                        campo particular. <br><br>
+                        celebrações e momentos  inesquecíveis. <br class="is-hidden-mobile is-hidden-tablet-only">
+
+                        <br class="is-hidden-tablet">
+                        Sua casa de campo particular. <br><br>
 
                         <span class="secondary-font mt20-mobile">
                             Spa Villa:
@@ -171,7 +173,7 @@ get_header();
 
 
 <section class="metric-section is-relative">
-    <img src="<?=IMG.'planta-white-background.svg'?>" class="planta-background" alt="">
+    <img src="<?=IMG.'planta-white-background.svg'?>" class="planta-background " alt="">
     <div class="wrap">
         <div class="container">
             <h2 class="title primary-font-semicondensed waypoint animation_bottom">
@@ -192,7 +194,7 @@ get_header();
                         <p class="big">Tipo 1</p>
                         <img src="<?=IMG.'icons/map-left.svg'?>" alt="">
                         <p class="description primary-font-condensed">
-                            140,36 m² | 3 suítes <br>
+                            140,36 m² | 3 suítes <br class="is-hidden-mobile">
                             2 vagas
                         </p>
                     </div>
@@ -209,7 +211,7 @@ get_header();
                         <p class="big">Tipo 2</p>
                         <img src="<?=IMG.'icons/map-right.svg'?>" alt="">
                         <p class="description primary-font-condensed">
-                            141,81 m² | 3 suítes <br>
+                            141,81 m² | 3 suítes <br class="is-hidden-mobile">
                             2 vagas
                         </p>
                     </div>
@@ -240,7 +242,7 @@ get_header();
                               <strong>
                                   Inspirado no <br>
                                   <span>Duque de Edimburgo,</span> <br>
-                                  Inpirado em Você.
+                                  Inspirado em Você.
                               </strong>
                           </p>
 
@@ -268,14 +270,18 @@ get_header();
 
            <p class="primary-font-condensed waypoint animation_left">
 
-               O novo empreendimento – <strong>Philip Duque de Edimburgo</strong> – é um convite para viver em um <strong>verdadeiro oásis</strong> de paz e
-               <br>
-               sofisticação. Inspirado em Balmoral, reflete a harmonia entre a natureza exuberante e o conforto refinado da vida em
-               <br>
-               família, <strong>valorizando raízes, conexões e memórias duradouras.</strong> <br style="display: block">
-               Na privilegiada <strong>QUADRA MAR</strong>, cada detalhe foi pensado para oferecer uma experiência única de bem-estar. Aqui, o luxo se
-               <br>
-               revela na segurança que acolhe, na tecnologia que simplifica e no design que conecta. <br style="display: block" class="is-hidden-tablet">
+               O novo empreendimento – <strong>Philip Duque de Edimburgo</strong> – é um convite para viver <br>
+               em um <strong>verdadeiro oásis</strong> de paz e sofisticação.
+
+               <br><br>
+               Inspirado em Balmoral, reflete a harmonia entre a natureza exuberante e o conforto refinado <br>
+               da vida em família, <strong>valorizando raízes, conexões e memórias duradouras.</strong> <br style="display: block"><br>
+               <br class="is-hidden-tablet" style="display: inline;">
+               Na privilegiada <strong>QUADRA MAR</strong>, cada detalhe foi pensado para oferecer uma experiência única de bem-estar.
+               <br><br>
+
+               Aqui, o luxo se revela na segurança que acolhe, na tecnologia que simplifica e no design que conecta. <br style="display: block" class="is-hidden-tablet"><br class="is-hidden-tablet" style="display: inline;">
+               <br><br>
                <strong>No Terazza, um espaço wellness exclusivo</strong> convida ao relaxamento, com ambientes que elevam os sentidos e oferecem uma
                <br>
                pausa revigorante para corpo e mente, e uma casa de campo, um refúgio exclusivo projetado para a família.
@@ -283,7 +289,8 @@ get_header();
                <br style="display: block">
                <br style="display: block">
 
-               <strong>BEM-ESTAR ELEVADO A UM NOVO PATAMAR. UM OÁSIS DE PAZ.</strong>
+               <strong>BEM-ESTAR ELEVADO A UM NOVO PATAMAR. <br class="is-hidden-tablet" style="display: inline;"> UM OÁSIS DE PAZ.</strong>
+               <br><br>
            </p>
 
            <a href="" class="btn green primary-font-condensed mt20 mt40-mobile waypoint animation_bottom_d1">
@@ -297,11 +304,9 @@ get_header();
 <section class="localizacao">
     <h2 class="primary-font-semicondensed waypoint animation_top">
         Uma Localização <br>
-        <span class="secondary-font ">Exclusiva e Estratégica</span>
+        <span class="secondary-font ">Exclusiva e  Estratégica</span>
     </h2>
-    <a href="#mapa" class="btn mb90 menu-item waypoint animation_bottom">
-        VEJA NO MAPA
-    </a>
+
 
     <div class="map-container">
         <div class="map-overlay"></div>
@@ -312,7 +317,7 @@ get_header();
 <section class="talk-to-us-section has-text-centered ">
     <img src="<?=IMG.'main-logo.svg'?>" class="waypoint animation_top" alt="">
 
-    <p class="mt20 mt100-mobile mb70-mobile mb40 primary-font-condensed waypoint animation_top">Saiba mais sobre o <br class="is-hidden-tablet"> empreendimento.</p>
+    <p class="mt20 mt70-mobile mb70-mobile mb40 primary-font-condensed waypoint animation_top">Saiba mais sobre o <br class="is-hidden-tablet"> empreendimento.</p>
 
     <a href="" class="btn primary-font-condensed waypoint animation_bottom">
         CONVERSE COM O NOSSO TIME

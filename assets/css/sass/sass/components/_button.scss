@@ -10,7 +10,7 @@ button, .button{
 
  .btn{
     position: relative;
-    background-color: $secondary-color;
+    background-color: #AF9A75;
     font-family: $primary-font;
     font-weight: 300;
     display: inline-block;
@@ -80,6 +80,20 @@ button, .button{
 
 
     }
+
+
+
+    // Smartphone
+    @media(max-width: 578px){
+       padding-left: 30px !important;
+       padding-right: 30px !important;
+
+
+       &.green {
+          padding-left: 30px !important;
+          padding-right: 30px !important;
+       }
+    }
  }
 
  .action-button {
@@ -141,6 +155,9 @@ button, .button{
             margin: 0 auto;
 			}
       }
+
+
+
 
 
  }

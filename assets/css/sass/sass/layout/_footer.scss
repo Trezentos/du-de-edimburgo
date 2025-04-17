@@ -24,8 +24,29 @@ footer{
 
   /* QUAX ASSINATURA */
 
-.quax-assinatura {
-   text-align: center;
+.quax-assinatura{
+  @include text($color: #FFF, $size:12px, $align: center);
+  border-bottom: 8px solid $green-color;
+  position: relative;
+  margin-top: -48px;
+  padding-top: 0;
+  z-index: 0;
+
+  .logo-quax{
+    width: 80px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+
+    img{ width: 20px; @include absolute($b:1px, $l: 30px); }
+  }
+  .arrow-up {
+    margin: 0 auto;
+    @include size(0);
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 40px solid $green-color;
+  }
 }
  /* FIM QUAX ASSINTAURA */
 
@@ -34,8 +55,9 @@ footer{
 @media only screen and (max-width: 576px) {
 
   footer {
+
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 70px;
     img {
       width: 220px;
     }

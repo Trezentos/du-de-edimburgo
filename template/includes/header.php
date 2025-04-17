@@ -109,7 +109,7 @@ $pg = $_SEO["permalink"];
 <main class="smooth-scroll-container">
     <div class="smooth-scroll-content">
 
-	<header id="topo" class="pt50 pb50 pt30-tablet pb30-tablet pt40-mobile pb40-mobile ">
+	<header id="topo" class="pt50 pb50 pt30-tablet pb30-tablet pt40-mobile pb20-mobile ">
 
 		<div class="wide-full">
 
