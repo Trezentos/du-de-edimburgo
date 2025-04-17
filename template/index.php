@@ -103,7 +103,7 @@ get_header();
             </div>
         </div>
 
-        <a href="" class="btn waypoint animation_bottom">
+        <a href="https://api.whatsapp.com/send?phone=5547992452661&amp;text=Ol%C3%A1%20(%20Contato%20do%20site%20)" target="_blank" class="btn waypoint animation_bottom">
             SAIBA MAIS SOBRE O EMPREENDIMENTO
         </a>
     </div>
@@ -293,7 +293,7 @@ get_header();
                <br><br>
            </p>
 
-           <a href="" class="btn green primary-font-condensed mt20 mt40-mobile waypoint animation_bottom_d1">
+           <a href="https://api.whatsapp.com/send?phone=5547992452661&amp;text=Ol%C3%A1%20(%20Contato%20do%20site%20)" target="_blank" class="btn green primary-font-condensed mt20 mt40-mobile waypoint animation_bottom_d1">
                DESCUBRA COMO VIVER <br class="is-hidden-tablet">
                UMA VIDA NOBRE
            </a>
@@ -319,7 +319,7 @@ get_header();
 
     <p class="mt20 mt70-mobile mb70-mobile mb40 primary-font-condensed waypoint animation_top">Saiba mais sobre o <br class="is-hidden-tablet"> empreendimento.</p>
 
-    <a href="" class="btn primary-font-condensed waypoint animation_bottom">
+    <a href="https://api.whatsapp.com/send?phone=5547992452661&amp;text=Ol%C3%A1%20(%20Contato%20do%20site%20)" target="_blank" class="btn primary-font-condensed waypoint animation_bottom">
         CONVERSE COM O NOSSO TIME
     </a>
 </section>

@@ -25,7 +25,7 @@
                                 Seu Oásis <br>
                                 <span class="secondary-font">acima de tudo</span>
                             </h1>
-                            <a href="" class="btn is-uppercase mb50">Agendar visita</a>
+                            <a href="https://api.whatsapp.com/send?phone=5547992452661&amp;text=Ol%C3%A1%20(%20Contato%20do%20site%20)" target="_blank" class="btn is-uppercase mb50">Agendar visita</a>
                             <img src="<?=IMG.'by-gessele.svg'?>" class="mb40 mb50-mobile" alt="">
                             <img src="<?=IMG.'gessele-marker.svg'?>" alt="">
 

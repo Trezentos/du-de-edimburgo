@@ -120,8 +120,8 @@ $pg = $_SEO["permalink"];
 					<div class="column is-hidden-mobile">
 						<nav class="links waypoint animation_left">
                             <ul>
-                                <li><a href="">A GESSELE</a></li>
-                                <li><a href="">NOSSOS EMPREENDIMENTOS</a></li>
+                                <li><a target="_blank" href="https://www.gesseleempreendimentos.com.br/">A GESSELE</a></li>
+                                <li><a target="_blank" href="https://www.gesseleempreendimentos.com.br/empreendimentos/">NOSSOS EMPREENDIMENTOS</a></li>
                             </ul>
                         </nav>
 					</div>
@@ -135,7 +135,7 @@ $pg = $_SEO["permalink"];
 					<div class="column "
                     >
                         <div class="button-container waypoint animation_right">
-                            <a href="<?=HTTP?>" title="<?=EMPRESA?>" class="logo btn is-hidden-mobile">
+                            <a href="https://api.whatsapp.com/send?phone=5547992452661&amp;text=Ol%C3%A1%20(%20Contato%20do%20site%20)" target="_blank" title="<?=EMPRESA?>" class="logo btn is-hidden-mobile">
                                 <img src="<?=IMG.'icons/whats-icon.svg'?>" class="whats-icon is-hidden-tablet-only" alt="">
                                 Fale com o comercial
                             </a>
