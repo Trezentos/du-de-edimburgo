@@ -30,7 +30,7 @@ if( !IS_LIGHTHOUSE )
 		'jquery.fancybox.min.js',
 //        'ondulating-effect.js',
         'main.js',
-        'glass-animation.js',
+//        'glass-animation.js',
         'counting-animation.js',
         !$MOBILE ? 'smooth-scroll.js' : '',
 	]);
@@ -55,7 +55,7 @@ get_header();
                 <p class="waypoint animation_bottom">apartamentos</p>
             </div>
             <div class="number-item waypoint animation_top">
-                <strong class="waypoint contador">44</strong>
+                <strong class="waypoint contador">02</strong>
                 <p class="waypoint animation_right">por andar</p>
             </div>
         </div>
@@ -143,7 +143,7 @@ get_header();
                 família acima de tudo.
             </span>
 
-            <div class="glass-container mt60-mobile <?= $MOBILE ? 'waypoint animation_bottom' : ''?>">
+            <div class="glass-container mt60-mobile waypoint animation_bottom">
                 <div class="container">
                     <p class="primary-font-condensed">
                         <span class="secondary-font">Balmoral House:</span> <br class="is-hidden-mobile ">

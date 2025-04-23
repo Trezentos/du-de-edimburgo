@@ -5,7 +5,7 @@
 section.features-section {
    background: #3B3B3B;
    padding-top: 60px;
-   //position: relative;
+   position: relative;
    //z-index: -2;
 
 
@@ -20,6 +20,8 @@ section.features-section {
          flex-direction: column;
          justify-content: center;
          align-items: center;
+         z-index: 2;
+         position: relative;
 
          strong  {
             font-size: 130px;
@@ -47,6 +49,8 @@ section.features-section {
       display: flex;
       justify-content: center;
       gap: 85px;
+      z-index: 2;
+      position: relative;
 
       .feature-item {
          display: flex;
@@ -86,7 +90,7 @@ section.features-section {
       position: absolute;
       bottom: 30px;
       right: 0;
-      z-index: -1;
+      z-index: 0;
    }
 }
 
@@ -185,17 +189,17 @@ section.gessele-apresenta {
       .glass-container {
          position: relative;
          background: rgba(255, 255, 255, 0.1); /* fundo semi-transparente */
-         //backdrop-filter: blur(20px); /* desfoque de fundo */
-         backdrop-filter: blur(0px); /* desfoque de fundo */
+         backdrop-filter: blur(20px); /* desfoque de fundo */
+         //backdrop-filter: blur(0px); /* desfoque de fundo */
          transition: 0.4s;
-         //-webkit-backdrop-filter: blur(20px); /* para Safari */
-         -webkit-backdrop-filter: blur(0px); /* para Safari */
+         -webkit-backdrop-filter: blur(20px); /* para Safari */
+         //-webkit-backdrop-filter: blur(0px); /* para Safari */
          border-radius: 40px;
          padding-bottom: 70px;
          padding-top: 70px;
          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-         //border: 3.5px solid rgba(255, 255, 255, 0.3);
-         border: 3.5px solid rgba(255, 255, 255, 0);
+         border: 3.5px solid rgba(255, 255, 255, 0.3);
+         //border: 3.5px solid rgba(255, 255, 255, 0);
 
          p {
             position: relative;
@@ -204,7 +208,8 @@ section.gessele-apresenta {
             color: #fff; /* ou outra cor que contraste bem */
             letter-spacing: 1.92px;
             transition: 0.4s;
-            opacity: 0;
+            //opacity: 0;
+            opacity: 1;
          }
 
          span {

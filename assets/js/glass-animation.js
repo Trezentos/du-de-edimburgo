@@ -10,12 +10,12 @@ jQuery(document).ready(function($) {
         const percent = ((scrollPos * 100) / scrollInicial).toFixed(2);
         const percentValue = parseFloat(percent);
 
-        // Opacidade da glass-container entre 60% e 80%
+        // console.log(__Scroll.scrollPosition);
+
         const containerProgress = clamp((percentValue - 60) / 20, 0, 1);
         const containerOpacity = containerProgress.toFixed(2);
         glassContainer.style.opacity = containerOpacity;
 
-        // Opacidade do texto entre 74% e 90%
         const textProgress = clamp((percentValue - 74) / 16, 0, 1);
         const translateY = (30 * (1 - textProgress)).toFixed(1);
 
@@ -25,7 +25,6 @@ jQuery(document).ready(function($) {
             position: 'relative'
         });
 
-        // Blur e borda entre 79% e 100%
         if (percentValue >= 79 && percentValue <= 100) {
             const progress = (percentValue - 79) / 21;
             const blurValue = (progress * 20).toFixed(1);
@@ -51,5 +50,13 @@ jQuery(document).ready(function($) {
         }
     };
 
+    // Atualiza no scroll com mouse
     __Scroll.scrollContainer.addEventListener('wheel', updateGlassEffect);
+
+    // Atualiza com setas ↑ e ↓ do teclado
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+            setTimeout(updateGlassEffect, 10); // Pequeno delay para permitir o scroll acontecer
+        }
+    });
 });

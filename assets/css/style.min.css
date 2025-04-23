@@ -1311,10 +1311,6 @@ hr {
   margin: 4px 0 20px;
   border: none; }
 
-section {
-  padding: 90px 0;
-  margin-top: -1px; }
-
 address {
   font-style: normal; }
 
@@ -1339,7 +1335,8 @@ address {
 
 section.features-section {
   background: #3B3B3B;
-  padding-top: 60px; }
+  padding-top: 60px;
+  position: relative; }
   section.features-section .numbers {
     display: flex;
     justify-content: center;
@@ -1348,7 +1345,9 @@ section.features-section {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      z-index: 2;
+      position: relative; }
       section.features-section .numbers .number-item strong {
         font-size: 130px;
         letter-spacing: -8px;
@@ -1367,7 +1366,9 @@ section.features-section {
   section.features-section .features {
     display: flex;
     justify-content: center;
-    gap: 85px; }
+    gap: 85px;
+    z-index: 2;
+    position: relative; }
     section.features-section .features .feature-item {
       display: flex;
       flex-direction: column;
@@ -1392,7 +1393,7 @@ section.features-section {
     position: absolute;
     bottom: 30px;
     right: 0;
-    z-index: -1; }
+    z-index: 0; }
 
 section.short-section {
   background: #234F4C;
@@ -1455,16 +1456,16 @@ section.gessele-apresenta {
       position: relative;
       background: rgba(255, 255, 255, 0.1);
       /* fundo semi-transparente */
-      backdrop-filter: blur(0px);
+      backdrop-filter: blur(20px);
       /* desfoque de fundo */
       transition: 0.4s;
-      -webkit-backdrop-filter: blur(0px);
+      -webkit-backdrop-filter: blur(20px);
       /* para Safari */
       border-radius: 40px;
       padding-bottom: 70px;
       padding-top: 70px;
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      border: 3.5px solid rgba(255, 255, 255, 0); }
+      border: 3.5px solid rgba(255, 255, 255, 0.3); }
       section.gessele-apresenta .container .glass-container p {
         position: relative;
         z-index: 1;
@@ -1474,7 +1475,7 @@ section.gessele-apresenta {
         /* ou outra cor que contraste bem */
         letter-spacing: 1.92px;
         transition: 0.4s;
-        opacity: 0; }
+        opacity: 1; }
       section.gessele-apresenta .container .glass-container span {
         font-size: 90px;
         font-weight: 100;
@@ -2459,8 +2460,9 @@ footer {
   font-size: 12px;
   text-align: center;
   border-bottom: 8px solid #234F4C;
-  position: relative;
-  margin-top: -37px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
   padding-top: 0;
   z-index: 0; }
   .quax-assinatura .logo-quax {
@@ -2854,6 +2856,10 @@ body {
 |                          |
 | -------------------------|
 */
+section {
+  padding: 90px 0;
+  margin-top: -1px; }
+
 .wrap {
   max-width: 1220px;
   width: 100%;

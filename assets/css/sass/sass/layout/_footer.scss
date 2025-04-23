@@ -27,8 +27,10 @@ footer{
 .quax-assinatura{
   @include text($color: #FFF, $size:12px, $align: center);
   border-bottom: 8px solid $green-color;
-  position: relative;
-  margin-top: -37px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  //margin-top: 7px;
   padding-top: 0;
   z-index: 0;
 
