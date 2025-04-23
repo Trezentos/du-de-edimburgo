@@ -1339,9 +1339,7 @@ address {
 
 section.features-section {
   background: #3B3B3B;
-  padding-top: 60px;
-  position: relative;
-  z-index: -2; }
+  padding-top: 60px; }
   section.features-section .numbers {
     display: flex;
     justify-content: center;
@@ -2462,7 +2460,7 @@ footer {
   text-align: center;
   border-bottom: 8px solid #234F4C;
   position: relative;
-  margin-top: -48px;
+  margin-top: -37px;
   padding-top: 0;
   z-index: 0; }
   .quax-assinatura .logo-quax {

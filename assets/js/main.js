@@ -7,10 +7,10 @@ jQuery(document).ready(function($)
 	mapContainer.addEventListener('click', (e)=>{
 		iframeMap.style.pointerEvents = 'all';
 
-	})
+	});
 
 
-	let menuOpen = false;
+	let menuOpenzasso = false;
 
 	var largura = window.screen.width;
     var altura = window.screen.height;
@@ -202,7 +202,7 @@ jQuery(document).ready(function($)
 			$('.menu ul').fadeOut(300);
 
 			$('header').removeClass('is-active');
-			menuOpen = false;
+			menuOpenzasso = false;
 		}
 		else
 		{
@@ -211,7 +211,7 @@ jQuery(document).ready(function($)
 			$('.menu ul').fadeIn(300);
 
 			$('header').addClass('is-active');
-			menuOpen = true;
+			menuOpenzasso = true;
 		}
 
 		$(this).toggleClass('is-active');
@@ -226,7 +226,7 @@ jQuery(document).ready(function($)
 		$('.menu ul').fadeOut(300);
 
 		$('header').removeClass('is-active');
-		menuOpen = false;
+		menuOpenzasso = false;
 
 		$('.navbar-burger').toggleClass('is-active');
 	});

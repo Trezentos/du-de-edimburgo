@@ -28,7 +28,7 @@ if( !IS_LIGHTHOUSE )
 		'jquery.maskedinput.js',
 		'jquery.cycle2.min.js',
 		'jquery.fancybox.min.js',
-        'ondulating-effect.js',
+//        'ondulating-effect.js',
         'main.js',
         'glass-animation.js',
         'counting-animation.js',
@@ -52,7 +52,7 @@ get_header();
             </div>
             <div class="number-item waypoint animation_top_d1">
                 <strong class="waypoint contador" >71</strong>
-                <p class="waypoint animation_bottom">aparamentos</p>
+                <p class="waypoint animation_bottom">apartamentos</p>
             </div>
             <div class="number-item waypoint animation_top">
                 <strong class="waypoint contador">44</strong>
@@ -118,13 +118,13 @@ get_header();
 <section class="gessele-apresenta"
          style="background-image: url(<?=IMG.($MOBILE ? 'gessele-apresenta-background-mobile.jpg' : 'gessele-apresenta-background.jpg')?>)"
 >
-    <img
-            src="<?=IMG.($MOBILE ? 'gessele-apresenta-background-mobile.jpg' : 'gessele-apresenta-background.jpg')?>"
-            alt=""
-            class="background-image"
-    >
+<!--    <img-->
+<!--            src="--><?php //=IMG.($MOBILE ? 'gessele-apresenta-background-mobile.jpg' : 'gessele-apresenta-background.jpg')?><!--"-->
+<!--            alt=""-->
+<!--    >-->
 
     <div class="wrap">
+<!--        class="background-image"-->
         <div class="container">
             <img src="<?=IMG.'by-gessele-bege.svg'?>" class="by-gessele-img waypoint animation_left" alt="">
 
