@@ -24,8 +24,8 @@ $pg = $_SEO["permalink"];
 
 		<!-- METATAGS -->
 		<meta charset="utf-8" />
-		<meta name="title" content="<?php echo $_SEO["title"]; ?>">
-		<meta name="description" content="Um oásis para toda a família acima de tudo." />
+		<meta name="title" content="<?php echo $_SEO["title"]; ?>" />
+		<meta name="description" content="<?php echo $_SEO["description"]; ?>" />
 
 		<link rel="canonical" href="<?php echo PageCanomical()?>" />
 		<link rel="stylesheet" href="https://use.typekit.net/bav3jmn.css">
