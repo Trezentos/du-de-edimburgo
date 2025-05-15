@@ -9,8 +9,8 @@
 |
 */
 
-error_reporting(0);
-//error_reporting(E_ALL & ~(E_STRICT|E_NOTICE|E_WARNING));
+error_reporting(1);
+error_reporting(E_ALL & ~(E_STRICT|E_NOTICE|E_WARNING));
 
 date_default_timezone_set('America/Sao_Paulo');
 setlocale(LC_ALL, 'pt_BR.UTF8');
@@ -45,14 +45,14 @@ if(LOCALHOST) {
 	define('AUTO_RELOAD',true);
 	// define('AUTO_RELOAD',false);
 } else {
-	define('DB_USER','quaxxcom_padrao');
-	define('DB_PASS','XHMfhXq=GIx');
+	define('DB_USER','duquedeedimbur33_user');
+	define('DB_PASS','!S+1prD;xyRQ');
 	define('DB_HOST','localhost');
-	define('DB_NAME','quaxxcom_duque-de-edimburgo');
+	define('DB_NAME','duquedeedimbur33_db');
 	define('PREFIX','adm_');
-	define('ROOT',$_SERVER['DOCUMENT_ROOT'].'/clientes/duque-de-edimburgo');
-	define('HTTP','https://'.$_SERVER['HTTP_HOST'].'/clientes/duque-de-edimburgo');
-	define('SHIFT_NUM', 2);
+	define('ROOT',$_SERVER['DOCUMENT_ROOT']);
+	define('HTTP','https://'.$_SERVER['HTTP_HOST']);
+	define('SHIFT_NUM', 0);
 
 	define('AUTO_RELOAD',false);
 }

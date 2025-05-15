@@ -47,11 +47,11 @@ get_header();
     <div class="wrap has-text-centered">
         <div class="numbers">
             <div class="number-item waypoint animation_top">
-                <strong class="waypoint contador">44</strong>
+                <strong class="waypoint contador">34</strong>
                 <p class="waypoint animation_left">pavimentos</p>
             </div>
             <div class="number-item waypoint animation_top_d1">
-                <strong class="waypoint contador" >71</strong>
+                <strong class="waypoint contador" >54</strong>
                 <p class="waypoint animation_bottom">apartamentos</p>
             </div>
             <div class="number-item waypoint animation_top">
@@ -182,14 +182,14 @@ get_header();
             </h2>
 
             <div class="tipos-container">
-                <a
-                        href="<?= IMG.'planta-1.png'?>"
-                        class="fancybox"
-                        title="Planta do tipo 1"
-                        rel="plantas"
-                        data-fancybox="galeria-apartamento"
-                        data-caption="Platna do tipo 1"
-                >
+<!--                <a-->
+<!--                        href="--><?php //= IMG.'planta-1.png'?><!--"-->
+<!--                        class="fancybox"-->
+<!--                        title="Planta do tipo 1"-->
+<!--                        rel="plantas"-->
+<!--                        data-fancybox="galeria-apartamento"-->
+<!--                        data-caption="Platna do tipo 1"-->
+<!--                >-->
                     <div class="tipo-box waypoint animation_left">
                         <p class="big">Tipo 1</p>
                         <img src="<?=IMG.'icons/map-left.svg'?>" alt="">
@@ -198,15 +198,15 @@ get_header();
                             2 vagas
                         </p>
                     </div>
-                </a>
-                <a
-                        href="<?= IMG.'planta-2.png'?>"
-                        class="fancybox"
-                        title="Planta do tipo 2"
-                        rel="plantas"
-                        data-fancybox="galeria-apartamento"
-                        data-caption="Platna do tipo 2"
-                >
+<!--                </a>-->
+<!--                <a-->
+<!--                        href="--><?php //= IMG.'planta-2.png'?><!--"-->
+<!--                        class="fancybox"-->
+<!--                        title="Planta do tipo 2"-->
+<!--                        rel="plantas"-->
+<!--                        data-fancybox="galeria-apartamento"-->
+<!--                        data-caption="Platna do tipo 2"-->
+<!--                >-->
                     <div class="tipo-box waypoint animation_right">
                         <p class="big">Tipo 2</p>
                         <img src="<?=IMG.'icons/map-right.svg'?>" alt="">
@@ -215,7 +215,7 @@ get_header();
                             2 vagas
                         </p>
                     </div>
-                </a>
+<!--                </a>-->
             </div>
 
             <p class="secondary-font mt100-mobile waypoint animation_bottom">O luxo feito sob medida para você.</p>

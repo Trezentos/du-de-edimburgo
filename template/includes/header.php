@@ -161,27 +161,3 @@ $pg = $_SEO["permalink"];
 
 
 
-
-	<div class="menu waypoint animation_bottom" >
-		<div class="wrap">
-
-			<img class="bt-close-menu waypoint animation_scale" src="<?=IMG?>icons/close.svg" alt="Fechar">
-
-			<div class="container-menu has-text-centered">
-
-				<ul class="waypoint animation_right_dd1">
-					<li> <a href="#o-condominio"  		class="menu-item smooth-scroll-link">O Condomínio</a></li>
-					<li> <a href="#lotes" 		class="menu-item smooth-scroll-link">Lotes</a></li>
-					<li> <a href="#galeria" class="menu-item smooth-scroll-link">Galeria</a></li>
-					<li> <a href="#casas" 		class="menu-item smooth-scroll-link" >Casas</a></li>
-					<li> <a href="#balneario-camboriu" 		class="menu-item smooth-scroll-link" >Balneário Camboriú</a></li>
-					<li> <a href="#wzx" 	class="menu-item smooth-scroll-link" >WZX e Horizontes Urbanismo</a></li>
-					<li> <a href="#contato"  class="smooth-scroll-link menu-item">CONTATO</a></li>
-
-				</ul>
-
-			</div>
-
-		</div>
-	</div>
-
